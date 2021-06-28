@@ -1,0 +1,52 @@
+[
+  {
+    "username": "Vasylyna",
+    "email": "vasylyna@hotmail.com",
+    "password": "password12345"
+  },
+  {
+    "username": "Dmitiry",
+    "email": "dmitiry@hotmail.com",
+    "password": "password12345"
+  },
+  {
+    "username": "Hayk",
+    "email": "hayk@hotmail.com",
+    "password": "password12345"
+  },
+  {
+    "username": "Sal",
+    "email": "sal@hotmail.com",
+    "password": "password12345"
+  },
+  {
+    "username": "Amanda",
+    "email": "amanda@hotmail.com",
+    "password": "password12345"
+  },
+  {
+    "username": "Mary",
+    "email": "mary@gmail.com",
+    "password": "password12345"
+  },
+  {
+    "username": "Ryan",
+    "email": "ryan@hotmail.com",
+    "password": "password12345"
+  },
+  {
+    "username": "Artyom",
+    "email": "artyom@hotmail.com",
+    "password": "password12345"
+  },
+  {
+    "username": "Jacob",
+    "email": "jacob@hotmail.com",
+    "password": "password12345"
+  },
+  {
+    "username": "Nikol",
+    "email": "nikol@hotmail.com",
+    "password": "password12345"
+  }
+]
