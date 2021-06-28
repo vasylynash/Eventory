@@ -25,16 +25,12 @@ Event.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        date: {
-            type: DataTypes.DATEONLY,
+        dateTime: {
+            type: DataTypes.DATE,
             allowNull: false,
             validate: {
                 isDate: true,
             }
-        },
-        time: {
-            type: DataTypes.TIME,
-            allowNull: false,
         },
         category_id: {
             type: DataTypes.INTEGER,
@@ -43,13 +39,6 @@ Event.init(
                 key: 'id',
             },
         },
-        // participants_ids: {
-        //     type: DataTypes.INTEGER,
-        //     references: {
-        //         model: User,
-        //         key: 'id',
-        //     },
-        // },
         owner_id: {
             type: DataTypes.INTEGER,
             references: {
