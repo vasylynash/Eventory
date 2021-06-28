@@ -2,41 +2,33 @@
   {
     "name": "Birthday Party",
     "location": "123 Sacramento ave, Sacramento, CA, 95828",
-    "date": "06/23/2021",
-    "time": "1:00pm",
+    "dateTime": "06/23/2021 13:00",
     "description": "My 39th Birthday Party",
     "category_id": "1",
-    "participants": "1,3,5,6",
     "owner_id": "3"
   },
   {
     "name": "Have fun outside",
     "location": "528 Sunrise ave, Sacramento, CA, 95828",
-    "date": "07/28/2021",
-    "time": "3:00pm",
+    "dateTime": "07/28/2021 15:00",
     "description": "From outdoor sports and yoga to cycling and hiking excursions, enhance your life by connecting with others.",
     "category_id": "7",
-    "participants": "2,4,6,5",
     "owner_id": "1"
   },
   {
     "name": "Fishing Tournament",
     "location": "123 Sacramento ave, Sacramento, CA, 95828",
-    "date": "07/30/2021",
-    "time": "8:00am",
+    "dateTime": "07/30/2021 08:00",
     "description": "Its our mission to use sport fishing clinics as a vehicle to mentor children and create real moments of truth between our angler mentors",
     "category_id": "5",
-    "participants": "1,3,5,6,7,2,4",
     "owner_id": "2"
   },
   {
     "name": "Open level yoga and mindfulness session",
     "location": "123 Sacramento ave, Sacramento, CA, 95828",
-    "date": "08/21/2021",
-    "time": "12:00pm",
+    "dateTime": "08/21/2021 12:00",
     "description": "These evening sesssions are for all abilities, offering gentle yoga and midfulness practice.",
     "category_id": "4",
-    "participants": "1,5,3,4",
     "owner_id": "5"
   }
 ]
