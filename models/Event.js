@@ -43,13 +43,13 @@ Event.init(
                 key: 'id',
             },
         },
-        participants_ids: {
-            type: DataTypes.ARRAY(DataTypes.INTEGER),
-            references: {
-                model: User,
-                key: 'id',
-            },
-        },
+        // participants_ids: {
+        //     type: DataTypes.INTEGER,
+        //     references: {
+        //         model: User,
+        //         key: 'id',
+        //     },
+        // },
         owner_id: {
             type: DataTypes.INTEGER,
             references: {
@@ -63,7 +63,7 @@ Event.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'project',
+        modelName: 'event',
     }
 );
 

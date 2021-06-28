@@ -21,13 +21,13 @@ Category.hasMany(Event, {
 });
 
 User.belongsToMany(Event, {
-    through: "Participants",
+    through: "participants",
     unique: false,
     foreignKey: "user_id",
 });
 
 Event.belongsToMany(User, {
-    through: "Participants",
+    through: "participants",
     unique: false,
     onDelete: "CASCADE",
     foreignKey: "event_id",
