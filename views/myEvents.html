@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../public/css/styles.css">
+    <title>Eventory | My Events</title>
+</head>
+<body>
+    <!-- nav -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid" id="navBc">
+            <a class="navbar-brand" id="logo" href="#">Eventory</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" id="myEvents" aria-current="page" href="#">My Events</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="searchEvents" href="#">Search Events</a>
+                </li>
+                <li>
+                    <a href="#" class="login-register-small"> Sign Up</a>
+                </li>
+                <li>
+                    <a href="#" class="login-register-small">Login</a>
+                </li>
+            </ul>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#" class="login-register"> Sign Up</a></li>
+                <li><a href="#" class="login-register">Login</a></li>
+              </ul>
+        </div>
+    </nav>
+        <!-- hero -->
+        <div class="hero">
+            <div class="hero-text-container">
+            <h1 class="hero-text">Meet new People.</h1>
+            <h1 class="hero-text">Find new places.</h1>
+            <h1 class="hero-text">Create new memories.</h1>
+            </div>
+            <button id="large-create-btn">Create Event</button>
+        </div>
+        <!-- All events title -->
+        <div class="event-title-container">
+            <h1 class="event-title">Created Events</h1>
+        </div>
+        <!-- Event grid -->
+        <div class="grid">
+        <div class="container event-grid-container">
+            <div class="row">
+                <div class="col">
+                    <!-- Event Card -->
+                <div class="card" style="width: 20rem;">
+                    <img src="../public/assets/birthday.jpg" class="card-img-top" alt="Event card">
+                    <div class="card-body">
+                        <h3 class="card-title">Card Title</h3>
+                        <p class="card-text">Date:<span class="event-date">/2/2021</span></p>
+                        <p class="card-text">Time:<span class="event-time">4:30PM</span></p>
+                        <div class="card-buttons">
+                            <button class="create-btn small-create-btn" id="edit-button">Edit</button>
+                            <button class="create-btn small-create-btn" id="delete-button">Delete</button>
+                        </div>
+                        <p class="created-by">Event created by: <span class='creator-username'>Username</span></p>
+                    </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <!-- Event Card -->
+                <div class="card" style="width: 20rem;">
+                    <img src="../public/assets/hike.jpg" class="card-img-top" alt="Event card">
+                    <div class="card-body">
+                        <h3 class="card-title">Card Title</h3>
+                        <p class="card-text">Date:<span class="event-date">/2/2021</span></p>
+                        <p class="card-text">Time:<span class="event-time">4:30PM</span></p>
+                        <div class="card-buttons">
+                            <button class="create-btn small-create-btn" id="edit-button">Edit</button>
+                            <button class="create-btn small-create-btn" id="delete-button">Delete</button>
+                        </div>
+                        <p class="created-by">Event created by: <span class='creator-username'>Username</span></p>
+                    </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <!-- Event Card -->
+                <div class="card" style="width: 20rem;">
+                    <img src="../public/assets/dinner.jpg" class="card-img-top" alt="Event card">
+                    <div class="card-body">
+                        <h3 class="card-title">Card Title</h3>
+                        <p class="card-text">Date:<span class="event-date">/2/2021</span></p>
+                        <p class="card-text">Time:<span class="event-time">4:30PM</span></p>
+                        <div class="card-buttons">
+                            <button class="create-btn small-create-btn" id="edit-button">Edit</button>
+                            <button class="create-btn small-create-btn" id="delete-button">Delete</button>
+                        </div>
+                        <p class="created-by">Event created by: <span class='creator-username'>Username</span></p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="event-title-container">
+        <h1 class="event-title">Joined Events</h1>
+    </div>
+    <div class="grid">
+        <div class="container event-grid-container">
+            <div class="row">
+                <div class="col">
+                    <!-- Event Card -->
+                <div class="card" style="width: 20rem;">
+                    <img src="../public/assets/birthday.jpg" class="card-img-top" alt="Event card">
+                    <div class="card-body">
+                        <h3 class="card-title">Card Title</h3>
+                        <p class="card-text">Date:<span class="event-date">/2/2021</span></p>
+                        <p class="card-text">Time:<span class="event-time">4:30PM</span></p>
+                        <button class="create-btn small-create-btn">Delete</button>
+                        <p class="created-by">Event created by: <span class='creator-username'>Username</span></p>
+                    </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <!-- Event Card -->
+                <div class="card" style="width: 20rem;">
+                    <img src="../public/assets/hike.jpg" class="card-img-top" alt="Event card">
+                    <div class="card-body">
+                        <h3 class="card-title">Card Title</h3>
+                        <p class="card-text">Date:<span class="event-date">/2/2021</span></p>
+                        <p class="card-text">Time:<span class="event-time">4:30PM</span></p>
+                        <button class="create-btn small-create-btn">Delete</button>
+                        <p class="created-by">Event created by: <span class='creator-username'>Username</span></p>
+                    </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <!-- Event Card -->
+                <div class="card" style="width: 20rem;">
+                    <img src="../public/assets/dinner.jpg" class="card-img-top" alt="Event card">
+                    <div class="card-body">
+                        <h3 class="card-title">Card Title</h3>
+                        <p class="card-text">Date:<span class="event-date">/2/2021</span></p>
+                        <p class="card-text">Time:<span class="event-time">4:30PM</span></p>
+                        <button class="create-btn small-create-btn">Delete</button>
+                        <p class="created-by">Event created by: <span class='creator-username'>Username</span></p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</html>
