@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap');
+ 
+* {
+    font-family: 'Montserrat', sans-serif; 
+ }
+ 
+ .navbar {
+     padding: 0;
+     box-shadow: 0 3px 3px rgba(0,0, 0, 35%);
+ }
+
+ .navbar a {
+     margin-left: 50px;
+ }
+
+#logo {
+    font-size: 64px;
+    font-weight: 800;
+    color: #EB5E28;
+    text-shadow: 0 3px 3px rgba(0,0, 0, 35%);
+}
+
+#navBc {
+    background-color:#FFFCF2;
+}
+
+#myEvents {
+    font-size: 35px;
+    font-weight: 700;
+    color: #403D39;
+}
+
+#myEvents:hover {
+    color: #EB5E28;
+}
+
+#searchEvents {
+    font-size: 35px;
+    font-weight: 700;
+    color: #403D39;
+}
+
+#searchEvents:hover {
+    color: #EB5E28;
+}
+
+.login-register-small {
+    display: none;
+}
+
+.login-register {
+    font-size: 25px;
+    font-weight: 700;
+    color: #403D39;
+}
+
+.login-register:hover {
+    color: #EB5E28;
+    text-decoration: none;
+}
+
+.navbar-right{
+    margin-right: 3em;
+}
+
+
+.login-register-container {
+    display: flex;
+    margin-left: 0px;
+    border: solid 1px black;
+}
+
+.hero-text {
+    font-size: 64px;
+    font-weight: 700;
+    color:white;
+    text-align: center;
+}
+
+.hero-text-container {
+    padding: 5em;
+}
+
+#large-create-btn {
+    display: flex;
+    margin: 2% auto 5% auto;
+    font-size: 32px;
+    font-weight: 700;
+    background-color: #EB5E28; 
+    color:white;
+    padding: 0 25px;
+    border: 1px solid #EB5E28;
+    border-radius: 25px;
+    box-shadow: 0 3px 3px rgba(0,0, 0, 35%);
+}
+
+#large-create-btn:hover {
+    box-shadow: 0 0px 30px #EB5E28;
+ }
+ 
+
+.hero {
+    margin: 0;
+    border: 1px solid black;
+    background-image: url("../assets/hero.png");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+}
+
+.event-title-container {
+    background-color: #FFFCF2;
+    margin: 0;
+    padding: auto;
+}
+
+.event-title {
+    font-size: 64px;
+    font-weight: 800;
+    color:#403D39;
+    text-align: center;
+    padding: 1%;
+    margin: 0;
+    box-shadow: 0 3px 3px rgba(0,0, 0, 35%);
+    position: relative;
+}
+
+.event-grid-container {
+    margin: auto;
+    padding: auto;
+}
+
+.grid {
+    background-color:#EAEAEA;
+    margin:0;
+    padding: 0;
+}
+
+.col {
+    margin: 2% auto;
+}
+
+.card {
+    box-shadow: 0 3px 3px rgba(0,0, 0, 35%);
+}
+
+.card-title {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.card-text {
+    font-weight: 700;
+    text-align: center;
+}
+
+.event-date {
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.event-time {
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.small-create-btn {
+    display: flex;
+    margin: auto;
+    font-size: 15px;
+    font-weight: 700;
+    background-color: #EB5E28; 
+    color:white;
+    padding: 0 10px;
+    border: 1px solid #EB5E28;
+    border-radius: 20px;
+    box-shadow: 0 3px 3px rgba(0,0, 0, 35%);
+}
+
+.small-create-btn:hover{
+   box-shadow: 0 0px 15px #EB5E28;
+}
+
+.created-by {
+    margin-top: 15px;
+    margin-bottom: 0;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.creator-username {
+    font-weight: 700;
+    color: #EB5E28;
+}
+
+.card-buttons {
+    display: flex;
+    flex-direction:row;
+    width: 70%;
+    margin: auto;
+}
+
+#edit-button {
+    padding: 0 20px;
+}
+
+#delete-button {
+    padding: 0 15px;
+}
+
+@media (max-width:1320px) {
+    #myEvents {
+        font-size: 25px;
+    }
+    
+    #searchEvents {
+        font-size: 25px;
+
+    }
+
+    .login-register {
+        font-size: 20px;
+
+    }
+    
+}
+
+@media (max-width:1156px) {
+    #myEvents {
+        font-size: 20px;
+    }
+    
+    #searchEvents {
+        font-size: 20px;
+    }
+
+    .login-register {
+        font-size: 15px;
+    }
+    
+}
+
+@media (max-width:991px) {
+    .nav {
+        display: none;
+    }
+    #myEvents {
+        font-size: 30px;
+    }
+    
+    #searchEvents {
+        font-size: 30px;
+    }
+
+    .login-register-small {
+        display: block;
+        font-size: 30px;
+        font-weight: 700;
+        color: #403D39;
+    }
+    
+    .login-register-small:hover {
+        color: #EB5E28;
+        text-decoration: none;
+    }
+    
+}
+
