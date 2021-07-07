@@ -22,7 +22,6 @@ router.get('/login', function(req, res) {
             + '<p><input type="submit" value="Login"></p>'
             + '<p style="color: red;">' + "LOGINERROR" + '</p>'
             + '</form>'
-            
         );
     }
 });
