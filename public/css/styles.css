@@ -211,6 +211,75 @@
     padding: 0 15px;
 }
 
+#exampleModalLabel {
+    font-size: 90px;
+    font-weight: 700;
+    margin:auto;
+    color: #403D39;
+}
+
+#close-button {
+    border: none;
+}
+
+#email-lable {
+    color: #EB5E28;
+    font-size: 26px;
+    padding-left: 7em;
+    font-weight: 700;
+}
+
+#typeEmail {
+    box-shadow: 0 3px 3px rgba(0,0, 0, 35%);
+    width: 60%;
+    margin: auto;
+}
+
+#pw-lable {
+    color: #EB5E28;
+    font-size: 26px;
+    padding-left: 6em;
+    font-weight: 700;
+}
+
+#typePassword {
+    box-shadow: 0 3px 3px rgba(0,0, 0, 35%);
+    width: 60%;
+    margin: auto;
+}
+
+.form-outline {
+    margin-bottom: 30px;
+}
+
+#modal-login-btn {
+    margin: auto;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: #EB5E28; 
+    color:white;
+    padding: 5px 30px;
+    border: 1px solid #EB5E28;
+    border-radius: 20px;
+    box-shadow: 0 3px 3px rgba(0,0, 0, 35%);
+}
+
+#modal-register-btn {
+    margin: auto;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: #403D39; 
+    color:white;
+    padding: 5px 30px;
+    border: 1px solid #403D39;
+    border-radius: 20px;
+    box-shadow: 0 3px 3px rgba(0,0, 0, 35%);
+}
+
+
+
+
+
 @media (max-width:1320px) {
     #myEvents {
         font-size: 25px;
