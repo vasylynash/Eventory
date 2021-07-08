@@ -2,23 +2,6 @@ const router = require('express').Router();
 const withAuth = require('../utils/auth');
 const { Category, Event, Participants, User } = require('../models');
 
-// ----------- Dashboard Main ---------------
-router.get('/', withAuth, async (req, res) => {
-  try {
-    const userData = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ['password'] },
-      //  include: [{ model: Event }],
-    });
-    const user = userData.get({ plain: true });
-    res.render('dashboard', {
-      ...user,
-      name: req.user.username,
-    });
-  } catch (error) {
-    res.status(500).json(error);
-  }
-});
-
 // ----------- New Event ---------------
 router.get('/newevent', withAuth, (req, res) => {
   try {
