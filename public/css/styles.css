@@ -248,6 +248,7 @@
     margin: auto;
 }
 
+
 #typeUsername {
     box-shadow: 0 3px 3px rgba(0,0, 0, 35%);
     width: 60%;
@@ -260,6 +261,7 @@
     padding-left: 6em;
     font-weight: 700;
 }
+
 
 .form-outline {
     margin-bottom: 30px;
@@ -276,8 +278,6 @@
     border-radius: 20px;
     box-shadow: 0 3px 3px rgba(0,0, 0, 35%);
 }
-
-
 
 #modal-register-btn {
     margin: auto;
@@ -297,7 +297,6 @@
     padding-left: 4em;
     font-weight: 700;
 }
-
 
 @media (max-width:1320px) {
     #myEvents {
