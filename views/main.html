@@ -25,7 +25,7 @@
                     <a class="nav-link" id="searchEvents" href="#">Search Events</a>
                 </li>
                 <li>
-                    <a href="#" class="login-register-small"> Sign Up</a>
+                    <a href="#" class="login-register-small" href="#" class="login-register"data-bs-toggle="modal" data-bs-target="#register-Modal"> Sign Up</a>
                 </li>
                 <li>
                     <a href="#" class="login-register-small" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</a>
@@ -33,8 +33,8 @@
             </ul>
             </div>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#" class="login-register"> Sign Up</a></li>
-                <li><a href="#" class="login-register"data-bs-toggle="modal" data-bs-target="#exampleModal">Login</a></li>
+                <li><a href="#" class="login-register"data-bs-toggle="modal" data-bs-target="#register-Modal">Sign Up</a></li>
+                <li><a href="#" class="login-register"data-bs-toggle="modal" data-bs-target="#Modal">Login</a></li>
               </ul>
         </div>
     </nav>
@@ -97,7 +97,8 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- login modal -->
+    <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -117,6 +118,39 @@
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="modal-register-btn">Register</button>
               <button type="button" class="btn btn-primary" id="modal-login-btn">Login</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- register modal -->
+      <div class="modal fade" id="register-Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id='close-button'>X</button>
+            </div>
+            <div class="modal-body" id="modal-bc">
+                <div class="form-outline">
+                    <label class="form-label" for="typeUsername" id="username-lable">Username</label>
+                    <input type="username" id="typeUsername" class="form-control" />
+                  </div>
+                <div class="form-outline">
+                    <label class="form-label" for="typeEmail" id="email-lable">Email</label>
+                    <input type="email" id="typeEmail" class="form-control" />
+                  </div>
+                  <div class="form-outline">
+                    <label class="form-label" for="typePassword" id="pw-lable">Password</label>
+                    <input type="password" id="typePassword" class="form-control" />
+                  </div>
+                  <div class="form-outline">
+                    <label class="form-label" for="typePassword" id="confirm-pw-lable">Confirm Password</label>
+                    <input type="password" id="typePassword" class="form-control" />
+                  </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="modal-register-btn">Login</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="modal-login-btn">Sign Up</button>
             </div>
           </div>
         </div>

@@ -248,6 +248,19 @@
     margin: auto;
 }
 
+#typeUsername {
+    box-shadow: 0 3px 3px rgba(0,0, 0, 35%);
+    width: 60%;
+    margin: auto;
+}
+
+#username-lable {
+    color: #EB5E28;
+    font-size: 26px;
+    padding-left: 6em;
+    font-weight: 700;
+}
+
 .form-outline {
     margin-bottom: 30px;
 }
@@ -264,6 +277,8 @@
     box-shadow: 0 3px 3px rgba(0,0, 0, 35%);
 }
 
+
+
 #modal-register-btn {
     margin: auto;
     font-size: 20px;
@@ -275,6 +290,14 @@
     border-radius: 20px;
     box-shadow: 0 3px 3px rgba(0,0, 0, 35%);
 }
+
+#confirm-pw-lable {
+    color: #EB5E28;
+    font-size: 26px;
+    padding-left: 4em;
+    font-weight: 700;
+}
+
 
 
 
