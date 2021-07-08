@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-const User = require('./User');
-const Category = require('./Category');
+// const User = require('./User');
+// const Category = require('./Category');
 
 class Event extends Model {}
 
@@ -35,14 +35,14 @@ Event.init(
         category_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: Category,
+                model: 'category',
                 key: 'id',
             },
         },
         owner_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: User,
+                model: 'user',
                 key: 'id',
             },
         }
