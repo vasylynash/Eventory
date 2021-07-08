@@ -10,11 +10,9 @@ router.get('/', withAuth, async (req, res) => {
       //  include: [{ model: Event }],
     });
     const user = userData.get({ plain: true });
-
     res.render('dashboard', {
       ...user,
-      logged_in: req.session.logged_in,
-      name: req.session.logged_name,
+      name: req.user.username,
     });
   } catch (error) {
     res.status(500).json(error);
@@ -25,9 +23,7 @@ router.get('/', withAuth, async (req, res) => {
 router.get('/newevent', withAuth, (req, res) => {
   try {
     if (req.session.logged_in) {
-      res.render('newEvent', {
-        logged_in: req.session.logged_in,
-      });
+      res.render('newEvent', {});
       return;
     }
     res.redirect('/dashboard');
@@ -45,7 +41,6 @@ router.get('/edit/:id', withAuth, async (req, res) => {
     const event = eventData.get({ plain: true });
     res.render('edit', {
       event,
-      logged_in: req.session.logged_in,
     });
   } catch (error) {
     res.status(500).json(error);
