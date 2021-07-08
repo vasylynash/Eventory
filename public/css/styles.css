@@ -211,7 +211,7 @@
     padding: 0 15px;
 }
 
-#exampleModalLabel {
+#ModalLabel {
     font-size: 90px;
     font-weight: 700;
     margin:auto;
@@ -222,7 +222,7 @@
     border: none;
 }
 
-#email-lable {
+#email-label {
     color: #EB5E28;
     font-size: 26px;
     padding-left: 7em;
@@ -235,7 +235,7 @@
     margin: auto;
 }
 
-#pw-lable {
+#pw-label {
     color: #EB5E28;
     font-size: 26px;
     padding-left: 6em;
@@ -247,6 +247,21 @@
     width: 60%;
     margin: auto;
 }
+
+
+#typeUsername {
+    box-shadow: 0 3px 3px rgba(0,0, 0, 35%);
+    width: 60%;
+    margin: auto;
+}
+
+#username-label {
+    color: #EB5E28;
+    font-size: 26px;
+    padding-left: 6em;
+    font-weight: 700;
+}
+
 
 .form-outline {
     margin-bottom: 30px;
@@ -276,9 +291,12 @@
     box-shadow: 0 3px 3px rgba(0,0, 0, 35%);
 }
 
-
-
-
+#confirm-pw-label {
+    color: #EB5E28;
+    font-size: 26px;
+    padding-left: 4em;
+    font-weight: 700;
+}
 
 @media (max-width:1320px) {
     #myEvents {
