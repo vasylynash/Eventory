@@ -12,6 +12,19 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+app.use(express.static(path.join(__dirname, 'public')));
+
+// handlebars engine
+const handlebars = require('express-handlebars');
+
+app.set('view engine', 'hbs');
+
+app.engine('hbs', handlebars({
+  layoutsDir: `${__dirname}/views/layouts`,
+  extname: 'hbs',
+  partialsDir:`${__dirname}/views/partials`
+}));
+
 // const hbs = exphbs.create({ helpers });
 
 const sess = {
