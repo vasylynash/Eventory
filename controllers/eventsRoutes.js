@@ -18,9 +18,11 @@ router.get('/newevent', withAuth, (req, res) => {
 // ----------- Edit Event ---------------
 router.get('/edit/:id', withAuth, async (req, res) => {
   try {
-    const eventData = await Event.findByPk(req.params.id, {
+    const eventData = await Event.findByPk(req.params.id
+      // , {
       //include: [{ model: Participants }],
-    });
+    // }
+    );
     const event = eventData.get({ plain: true });
     res.render('edit', {
       event,
