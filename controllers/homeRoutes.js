@@ -7,7 +7,7 @@ router.get('/', async function (req, res) {
 
   const events = eventData.map((el) => el.get({ plain: true }));
   
-  res.render('mainAll',{
+  res.render('all',{
     events
   })
   // res.json(events);
@@ -40,7 +40,7 @@ router.get('/dashboard', withAuth, async function (req, res) {
 
   const events = eventData.map((el) => el.get({ plain: true }));
   // res.json(events);
-  res.render('myEventsAll',{
+  res.render('userCardsAll',{
     events
   })
 });
