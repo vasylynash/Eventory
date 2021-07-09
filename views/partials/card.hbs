@@ -1,4 +1,4 @@
-{{#each events as |event|}}
+
 <div class="col">
     <!-- Event Card -->
     <div class="card" style="width: 20rem;">
@@ -7,9 +7,8 @@
             <h3 class="card-title">{{name}}</h3>
             <p class="card-text">Date:<span class="event-date">{{dateTime}}</span></p>
             <p class="card-text">Time:<span class="event-time">{{dateTime}}</span></p>
-            <button class="create-btn small-create-btn" data-bs-toggle="modal" data-bs-target="#expanded-Modal" id="{{id}}">Learn more</button>
+            <button class="create-btn small-create-btn learn-more-btn" data-bs-toggle="modal" data-bs-target="#expanded-{{id}}">Learn more</button>
             <p class="created-by">Event created by: <span class='creator-username'>{{owner_id}}</span></p>
         </div>
         </div>
     </div>
-    {{/each}}

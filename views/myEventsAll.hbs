@@ -1,0 +1,29 @@
+        <div class="event-title-container">
+            <h1 class="event-title">Created Events</h1>
+        </div>
+        <!-- Event grid -->
+        <div class="grid">
+        <div class="container event-grid-container">
+            <div class="row">
+                {{!-- event cards --}}
+                {{#each events as |event|}}
+                {{> myEventsCard}}
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    <div class="event-title-container">
+        <h1 class="event-title">Joined Events</h1>
+    </div>
+    <!-- Event grid -->
+    <div class="grid">
+    <div class="container event-grid-container">
+        <div class="row">
+            {{!-- event cards --}}
+            {{#each events as |event|}}
+            {{> myEventsCard}}
+            {{/each}}
+        </div>
+    </div>
+</div>
+

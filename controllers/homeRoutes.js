@@ -6,7 +6,8 @@ router.get('/', async function (req, res) {
   const eventData = await Event.findAll();
 
   const events = eventData.map((el) => el.get({ plain: true }));
-  res.render('card',{
+  
+  res.render('mainAll',{
     events
   })
   // res.json(events);
