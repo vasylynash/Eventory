@@ -34,8 +34,8 @@
             </div>
             {{!-- if logged in display logout button --}}
             <ul class="nav navbar-nav navbar-right">
-                {{#if logged_in}}
-                <li><a href="#" class="login-register"data-bs-toggle="modal" data-bs-target="#Modal" id="logout-btn">Logout</a></li>
+                {{#if user.id}}
+                <li><a href="#" class="login-register"data-bs-toggle="modal">Logout</a></li>
                 {{else}}
                 <li><a href="#" class="login-register"data-bs-toggle="modal" data-bs-target="#register-Modal">Sign Up</a></li>
                 <li><a href="#" class="login-register"data-bs-toggle="modal" data-bs-target="#Modal">Login</a></li>
@@ -119,7 +119,7 @@
   src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"
 ></script>
 <script src="../../js/index.js"></script>
-{{#if logged_in}}
+{{#if user.id}}
 <script src="../../js/logout.js"></script>
 {{/if}}
 </html>

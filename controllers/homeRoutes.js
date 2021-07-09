@@ -6,9 +6,15 @@ router.get('/', async function (req, res) {
   const eventData = await Event.findAll();
 
   const events = eventData.map((el) => el.get({ plain: true }));
+
+  const user = req.user.get({ plain: true });
+  console.log('++++++++++++++++++++');
+  console.log(user);
+  console.log('++++++++++++++++++++');
   
   res.render('all',{
-    events
+    events,
+    user
   })
   // res.json(events);
 });
@@ -39,9 +45,11 @@ router.get('/dashboard', withAuth, async function (req, res) {
   });
 
   const events = eventData.map((el) => el.get({ plain: true }));
+  const user = req.user.get({ plain: true });
   // res.json(events);
   res.render('userCardsAll',{
-    events
+    events,
+    user
   })
 });
 
