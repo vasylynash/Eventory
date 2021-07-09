@@ -1,11 +1,11 @@
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
-  const email = document.querySelector('#email').value.trim();
-  const password = document.querySelector('#password').value.trim();
+  const email = document.querySelector('#typeEmail').value.trim();
+  const password = document.querySelector('#typePassword').value.trim();
 
   if (email && password) {
-    const response = await fetch('/api/user/login', {
+    const response = await fetch('/api/users/login', {
       method: 'POST',
       body: JSON.stringify({ email, password }),
       headers: { 'Content-Type': 'application/json' },
@@ -19,5 +19,5 @@ const loginFormHandler = async (event) => {
 };
 
 document
-  .querySelector('.login-form') // form
-  .addEventListener('submit', loginFormHandler);
+  .querySelector('#modal-login-btn')
+  .addEventListener('click', loginFormHandler);
