@@ -6,7 +6,17 @@ router.get('/', async function (req, res) {
   const eventData = await Event.findAll();
 
   const events = eventData.map((el) => el.get({ plain: true }));
-  res.json(events);
+
+  const user = req.user.get({ plain: true });
+  console.log('++++++++++++++++++++');
+  console.log(user);
+  console.log('++++++++++++++++++++');
+  
+  res.render('all',{
+    events,
+    user
+  })
+  // res.json(events);
 });
 
 router.get('/login', function (req, res) {
@@ -35,7 +45,12 @@ router.get('/dashboard', withAuth, async function (req, res) {
   });
 
   const events = eventData.map((el) => el.get({ plain: true }));
-  res.json(events);
+  const user = req.user.get({ plain: true });
+  // res.json(events);
+  res.render('userCardsAll',{
+    events,
+    user
+  })
 });
 
 module.exports = router;

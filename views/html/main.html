@@ -69,14 +69,14 @@
                     </div>
                 </div>
                 <div class="col">
-                    <!-- Event Card -->
+                <!-- Event Card -->
                 <div class="card" style="width: 20rem;">
                     <img src="../public/assets/hike.jpg" class="card-img-top" alt="Event card">
                     <div class="card-body">
                         <h3 class="card-title">Card Title</h3>
                         <p class="card-text">Date:<span class="event-date">/2/2021</span></p>
                         <p class="card-text">Time:<span class="event-time">4:30PM</span></p>
-                        <button class="create-btn small-create-btn">Learn more</button>
+                        <button class="create-btn small-create-btn" data-bs-toggle="modal" data-bs-target="#expanded-Modal">Learn more</button>
                         <p class="created-by">Event created by: <span class='creator-username'>Username</span></p>
                     </div>
                     </div>
@@ -116,8 +116,8 @@
                   </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="modal-register-btn">Register</button>
-              <button type="button" class="btn btn-primary" id="modal-login-btn">Login</button>
+              <button type="button" class="btn-secondary" data-bs-dismiss="modal" id="modal-register-btn">Register</button>
+              <button type="button" class='btn-primary' data-bs-dismiss="modal" id="modal-login-btn">Login</button>
             </div>
           </div>
         </div>
@@ -149,12 +149,43 @@
                   </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" id="modal-register-btn">Login</button>
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="modal-login-btn">Sign Up</button>
+                <button type="button" class="btn-primary" id="modal-register-btn" data-bs-dismiss="modal">Login</button>
+                <button type="button" class="btn-secondary" data-bs-dismiss="modal" id="modal-login-btn">Sign Up</button>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- expanded card modal -->
+      <div class="modal fade" id="expanded-Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id='expanded-modal-close-button'>X</button>
+            </div>
+            <div class="modal-body" id="modal-bc">
+                <!-- expanded card -->
+                <div class="modal-card" style="width: 450px;">
+                  <img src="../public/assets/camping.jpg"  class="card-img-top" alt="Expanded Card Modal">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item expanded-modal-list">Date:1/2/2021</li>
+                    <li class="list-group-item expanded-modal-list">Time: 4:30PM</li>
+                    <li class="list-group-item expanded-modal-list">Location: Sacramento CA</li>
+                  </ul>
+                  <div class="card-body">
+                    <a href="#" class="card-link join-event-btn">Join Event</a> 
+                  </div>
+                </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script

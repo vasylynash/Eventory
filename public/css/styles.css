@@ -1,8 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap');
  
 * {
-    font-family: 'Montserrat', sans-serif; 
+    font-family: 'Montserrat', sans-serif;
+    outline: 0;
+    outline-style: none; 
  }
+
+ *:active, *:focus {
+    outline: 0;
+    border: none;
+    outline-style: none;
+  }
  
  .navbar {
      padding: 0;
@@ -92,6 +100,7 @@
     border: 1px solid #EB5E28;
     border-radius: 25px;
     box-shadow: 0 3px 3px rgba(0,0, 0, 35%);
+    outline: none;
 }
 
 #large-create-btn:hover {
@@ -146,7 +155,7 @@
 }
 
 .card-title {
-    font-size: 36px;
+    font-size: 20px;
     font-weight: 700;
     text-align: center;
 }
@@ -177,10 +186,16 @@
     border: 1px solid #EB5E28;
     border-radius: 20px;
     box-shadow: 0 3px 3px rgba(0,0, 0, 35%);
+    outline: none;
+    outline-style: none;
 }
 
 .small-create-btn:hover{
    box-shadow: 0 0px 15px #EB5E28;
+}
+
+.small-create-btn:active, .small-create-btn:focus {
+    outline: 0;
 }
 
 .created-by {
@@ -255,6 +270,12 @@
     margin: auto;
 }
 
+#confirmPassword{
+    box-shadow: 0 3px 3px rgba(0,0, 0, 35%);
+    width: 60%;
+    margin: auto;
+}
+
 #username-label {
     color: #EB5E28;
     font-size: 26px;
@@ -277,6 +298,7 @@
     border: 1px solid #EB5E28;
     border-radius: 20px;
     box-shadow: 0 3px 3px rgba(0,0, 0, 35%);
+    outline: 0;
 }
 
 #modal-register-btn {
@@ -289,6 +311,7 @@
     border: 1px solid #403D39;
     border-radius: 20px;
     box-shadow: 0 3px 3px rgba(0,0, 0, 35%);
+    outline: 0;
 }
 
 #confirm-pw-label {
@@ -297,6 +320,52 @@
     padding-left: 4em;
     font-weight: 700;
 }
+
+.list-group-item {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    color: #EB5E28;
+}
+
+.expanded-card-li{
+    font-weight: 400;
+    font-size: 18px;
+    color: black;
+}
+
+.close-btn {
+    border: none;
+    margin-left: 95%;
+}
+
+.expanded-card-text {
+    color: #403D39;
+}
+
+.expanded-card-title {
+    font-size: 25px;
+    color: #EB5E28;
+}
+
+.expanded-join-btn {
+    margin-left: 125px;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: #EB5E28; 
+    color:white;
+    padding: 5px 30px;
+    border: 1px solid #EB5E28;
+    border-radius: 20px;
+    box-shadow: 0 3px 3px rgba(0,0, 0, 35%);
+    outline: 0;
+}
+
+.expanded-join-btn:hover {
+    box-shadow: 0 0 16px #EB5E28;
+    color: white;
+}
+
 
 @media (max-width:1320px) {
     #myEvents {
@@ -310,7 +379,6 @@
 
     .login-register {
         font-size: 20px;
-
     }
     
 }

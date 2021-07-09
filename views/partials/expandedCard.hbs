@@ -1,0 +1,28 @@
+      <div class="modal fade" id="expanded-{{id}}" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="btn-close close-btn" data-bs-dismiss="modal" aria-label="Close">X</button>
+            </div>
+            <div class="modal-body">
+                <!-- expanded card -->
+                <div class="modal-card" style="width: 450px;">
+                    <img src="../../assets/{{category_id}}.jpg"  class="card-img-top" alt="Expanded Card Modal">
+                    <div class="card-body">
+                        <h5 class="card-title expanded-card-title">{{name}}</h5>
+                        <p class="card-text expanded-card-text">{{description}}</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item expanded-modal-list">Date:<span class="expanded-card-li">    {{dateTime}}</span></li>
+                        <li class="list-group-item expanded-modal-list">Time:<span class="expanded-card-li">    {{dateTime}}</span></li>
+                        <li class="list-group-item expanded-modal-list">Location: <span class="expanded-card-li">   {{location}}</span></li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" data-bs-dismiss="modal" class="card-link join-event-btn expanded-join-btn">Join Event</a> 
+                    </div>
+                </div>
+            </div>
+            </div>
+          </div>
+        </div>
+ 
