@@ -18,9 +18,15 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
+              {{#if user.id}}
                 <li class="nav-item">
                     <a class="nav-link active" id="myEvents" aria-current="page" href="/dashboard">My Events</a>
                 </li>
+              {{else}}
+                <li class="nav-item">
+                      <a class="nav-link active" id="myEvents" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#Modal">My Events</a>
+                </li>
+              {{/if}}
                 <li class="nav-item">
                     <a class="nav-link" id="searchEvents" href="/">All Events</a>
                 </li>
@@ -73,7 +79,7 @@
                   </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn-secondary" data-bs-dismiss="modal" id="modal-register-btn">Register</button>
+              <button type="button" class="btn-secondary" id="modal-register-btn" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#register-Modal">Register</button>
               <button type="button" class='btn-primary' data-bs-dismiss="modal" id="modal-login-btn">Login</button>
             </div>
           </div>
@@ -106,7 +112,7 @@
                   </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn-primary" id="modal-register-btn" data-bs-dismiss="modal">Login</button>
+                <button type="button" class="btn-primary" id="modal-register-btn" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#Modal">Login</button>
                 <button type="button" class="btn-secondary" data-bs-dismiss="modal" id="modal-login-btn">Sign Up</button>
             </div>
           </div>
