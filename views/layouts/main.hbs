@@ -56,7 +56,7 @@
             <h1 class="hero-text">Find new places.</h1>
             <h1 class="hero-text">Create new memories.</h1>
             </div>
-            <button id="large-create-btn">Create Event</button>
+            <button id="large-create-btn" data-bs-toggle="modal" data-bs-target="#create-event-Modal">Create Event</button>
         </div>
         <!-- All events title -->
           {{{ body }}}
@@ -69,6 +69,7 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id='close-button'>X</button>
             </div>
             <div class="modal-body" id="modal-bc">
+              <form>
                 <div class="form-outline">
                     <label class="form-label" for="typeEmail" id="email-label">Email</label>
                     <input type="email" id="typeEmail" class="form-control" />
@@ -77,10 +78,12 @@
                     <label class="form-label" for="typePassword" id="pw-label">Password</label>
                     <input type="password" id="typePassword" class="form-control" />
                   </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn-secondary" id="modal-register-btn" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#register-Modal">Register</button>
-              <button type="button" class='btn-primary' data-bs-dismiss="modal" id="modal-login-btn">Login</button>
+                  <div class="buttons">
+                    {{!-- buttons --}}
+                    <button type="button" class="register-modal-buttons grey-btn" data-bs-dismiss="modal" id="modal-register-btn">Sign Up</button>
+                    <button type="submit" class="register-modal-buttons orange-btn" id="modal-login-btn" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#Modal">Login</button>
+                  </div>
+                </form>
             </div>
           </div>
         </div>
@@ -94,6 +97,7 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id='close-button'>X</button>
             </div>
             <div class="modal-body" id="modal-bc">
+              <form>
                 <div class="form-outline">
                     <label class="form-label" for="typeUsername" id="username-label">Username</label>
                     <input type="username" id="typeUsername" class="form-control" />
@@ -110,10 +114,65 @@
                     <label class="form-label" for="confirmPassword" id="confirm-pw-label">Confirm Password</label>
                     <input type="password" id="confirmPassword" class="form-control" />
                   </div>
+                  <div class="buttons">
+                  {{!-- buttons --}}
+                  <button type="submit" class="register-modal-buttons orange-btn" data-bs-dismiss="modal" id="modal-register-btn">Sign Up</button>
+                  <button type="button" class="register-modal-buttons grey-btn" id="modal-login-btn" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#Modal">Login</button>
+                </div>
+              </form>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn-primary" id="modal-register-btn" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#Modal">Login</button>
-                <button type="button" class="btn-secondary" data-bs-dismiss="modal" id="modal-login-btn">Sign Up</button>
+
+          </div>
+        </div>
+      </div>
+            {{!-- create Event Modal --}}
+            <div class="modal fade" id="create-event-Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="ModalLabel">Create Event</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id='close-button'>X</button>
+            </div>
+            <div class="modal-body" id="modal-bc">
+              <form>
+                <!-- 2 column grid layout with text inputs for the first and last names -->
+                <div class="row mb-4">
+                  <div class="col">
+                    <div class="form-outline">
+                      <label class="form-label create-label" for="form6">Event Date</label>
+                      <input type="date" id="form4" class="form-control"/>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-outline">
+                      <label class="form-label create-label" for="form6">Event Time</label>
+                      <input type="time" id="form5" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+                <!-- Event title input -->
+                <div class="form-outline mb-4">
+                  <label class="form-label create-label" for="form6">Event Title</label>
+                  <input type="text" id="form6" class="form-control long-input" />
+                </div>
+                <!-- Adress input -->
+                <div class="form-outline mb-4">
+                  <label class="form-label create-label" for="form6">Address</label>
+                  <input type="text" id="form7" class="form-control long-input" placeholder="123 Street ave, City, CA, 12345" />
+                </div>
+                <!-- Category input -->
+                <div class="form-outline mb-4">
+                  <label class="form-label create-label" for="form6">Event Category</label>
+                  <input type="number" id="form8" class="form-control long-input" placeholder="1" />
+                </div>
+                <!-- Description input -->
+                <div class="form-outline mb-4">
+                  <label class="form-label create-label" for="form6">Event Description</label>
+                  <textarea class="form-control long-input" id="form9" rows="4"></textarea>
+                </div>
+                <!-- Submit button -->
+                <button type="submit" class="btn-primary" id="modal-create-event-btn" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#Modal">Create Event</button>
+              </form>
             </div>
           </div>
         </div>
