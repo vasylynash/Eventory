@@ -3,7 +3,6 @@ const authConfig = require('../../src/auth/authConfig');
 
 router.post('/login', authConfig.authenticate('login', {
             successRedirect: '/',
-            failureRedirect: '/login',
         })
 );
 
