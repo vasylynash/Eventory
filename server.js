@@ -2,7 +2,7 @@ const authConfig = require('./src/auth/authConfig');
 const path = require('path');
 const express = require('express');
 const session = require('express-session');
-const exphbs = require('express-handlebars');
+// const exphbs = require('express-handlebars');
 // const authRoutes = require('./controllers/api/userRoutes');
 const routes = require('./controllers');
 // const helpers = require('./utils/helpers');
@@ -23,6 +23,7 @@ app.engine('hbs', handlebars({
   layoutsDir: `${__dirname}/views/layouts`,
   extname: 'hbs',
   partialsDir:`${__dirname}/views/partials`,
+  helpers: require('./utils/helpers'),
 }));
 
 
