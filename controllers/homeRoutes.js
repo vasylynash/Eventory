@@ -13,7 +13,6 @@ router.get('/', async function (req, res) {
   });
 
   const events = eventData.map((el) => el.get({ plain: true })); 
-  console.log(events);
   
   res.render('all',{
     events
