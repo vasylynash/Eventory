@@ -25,7 +25,7 @@ const LocalStrategy = require('passport-local').Strategy;
         }
     ));
 
-    // Required for storing user info into session 
+    // Required for storing user info into sesion 
     passport.serializeUser(function(user, done) {
       done(null, user.id);
     });
