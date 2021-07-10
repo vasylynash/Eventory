@@ -22,8 +22,10 @@ app.set('view engine', 'hbs');
 app.engine('hbs', handlebars({
   layoutsDir: `${__dirname}/views/layouts`,
   extname: 'hbs',
-  partialsDir:`${__dirname}/views/partials`
+  partialsDir:`${__dirname}/views/partials`,
 }));
+
+
 
 // const hbs = exphbs.create({ helpers });
 
@@ -42,8 +44,15 @@ app.use(session(sess));
 app.use(authConfig.initialize());
 app.use(authConfig.session());
 
-// app.engine('handlebars', hbs.engine);
-// app.set('view engine', 'handlebars');
+/* Middleware that register user global variable for the request (to make it available in handlebars)
+Must be after passport middleware
+*/
+app.use(function(req,res,next){
+  if (req.user) {
+    res.locals.user = req.user.get({plain: true});
+  }
+  next();
+});
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

@@ -5,42 +5,11 @@ const withAuth = require('../utils/auth');
 router.get('/', async function (req, res) {
   const eventData = await Event.findAll();
 
-  const events = eventData.map((el) => el.get({ plain: true }));
-
-  let user={};
-
-  if(req.user) {
-     user = req.user.get({ plain: true });
-  }; 
-
-
-  console.log('++++++++++++++++++++');
-  console.log(user);
-  console.log('++++++++++++++++++++');
+  const events = eventData.map((el) => el.get({ plain: true })); 
   
   res.render('all',{
-    events,
-    user
-  })
-  // res.json(events);
-});
-
-router.get('/login', function (req, res) {
-  if (req.user) {
-    res.redirect('/');
-  } else {
-    res.send(
-      '<form action="/api/users/login" method="POST">' +
-        '<h2>Login</h2>' +
-        '<p><input name="email"></p>' +
-        '<p><input name="password"></p>' +
-        '<p><input type="submit" value="Login"></p>' +
-        '<p style="color: red;">' +
-        'LOGINERROR' +
-        '</p>' +
-        '</form>'
-    );
-  }
+    events
+  });
 });
 
 router.get('/dashboard', withAuth, async function (req, res) {
@@ -51,17 +20,9 @@ router.get('/dashboard', withAuth, async function (req, res) {
   });
 
   const events = eventData.map((el) => el.get({ plain: true }));
-
-  let user ={};
-
-  if(req.user){
-    user = req.user.get({ plain: true });
-  }
   
-  // res.json(events);
   res.render('userCardsAll',{
-    events,
-    user
+    events
   })
 });
 
