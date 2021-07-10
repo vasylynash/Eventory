@@ -33,18 +33,24 @@
                 <li class="nav-item">
                     <a class="nav-link" id="searchEvents" href="/">All Events</a>
                 </li>
+                {{#if user.id}}
+                <li>
+                    <a href="api/users/logout" class="login-register-small" data-bs-toggle="modal" id="logout">Logout</a>
+                </li>
+                {{else}}
                 <li>
                     <a href="#" class="login-register-small" href="#" class="login-register"data-bs-toggle="modal" data-bs-target="#register-Modal"> Sign Up</a>
                 </li>
                 <li>
                     <a href="#" class="login-register-small" data-bs-toggle="modal" data-bs-target="#Modal">Login</a>
                 </li>
+                {{/if}}
             </ul>
             </div>
             {{!-- if logged in display logout button --}}
             <ul class="nav navbar-nav navbar-right">
                 {{#if user.id}}
-                <li><a href="#" class="login-register"data-bs-toggle="modal">Logout</a></li>
+                <li><a href="api/users/logout" class="login-register" id="logout">Logout</a></li>
                 {{else}}
                 <li><a href="#" class="login-register"data-bs-toggle="modal" data-bs-target="#register-Modal">Sign Up</a></li>
                 <li><a href="#" class="login-register"data-bs-toggle="modal" data-bs-target="#Modal">Login</a></li>
@@ -87,16 +93,12 @@
                   </div>
                   <div class="buttons">
                     {{!-- buttons --}}
-                    <button type="button" class="register-modal-buttons grey-btn" data-bs-dismiss="modal" id="modal-register-btn" data-bs-target="#register-Modal">Sign Up</button>
-                    <button type="submit" class="register-modal-buttons orange-btn" id="modal-login-btn" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#Modal">Login</button>
+                    <button type="button" class="register-modal-buttons grey-btn" id="modal-register-btn" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#register-Modal">Sign Up</button>
+                    <button type="submit" class="register-modal-buttons orange-btn" id="modal-login-btn" data-bs-dismiss="modal" data-bs-toggle="modal">Login</button>
                   </div>
                 </form>
             </div>
           </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn-secondary" data-bs-dismiss="modal" id="modal-register-btn">Register</button>
-          <button type="button" class='btn-primary' data-bs-dismiss="modal" id="modal-login-btn">Login</button>
         </div>
       </div>
       <!-- register modal -->
@@ -186,23 +188,6 @@
               </form>
             </div>
           </div>
-          <div class="form-outline">
-            <label class="form-label" for="typeEmail" id="email-label">Email</label>
-            <input type="email" id="typeEmail" class="form-control" />
-          </div>
-          <div class="form-outline">
-            <label class="form-label" for="typePassword" id="pw-label">Password</label>
-            <input type="password" id="typePassword" class="form-control" />
-          </div>
-          <div class="form-outline">
-            <label class="form-label" for="confirmPassword" id="confirm-pw-label">Confirm Password</label>
-            <input type="password" id="confirmPassword" class="form-control" />
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn-primary" id="modal-register-btn" data-bs-dismiss="modal">Login</button>
-          <button type="button" class="btn-secondary" data-bs-dismiss="modal" id="modal-login-btn">Sign Up</button>
-        </div>
       </div>
     </div>
   </div>
