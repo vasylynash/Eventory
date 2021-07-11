@@ -1,22 +1,26 @@
 const signupForm = async (event) => {
   event.preventDefault();
-  const email = document.querySelector('#email').value.trim(); // modal input for email must have id email
-  const username = document.querySelector('#username').value.trim(); // modal input for username must have id username
-  const password = document.querySelector('#password').value.trim(); // modal input for password must have id password
-
+  const email = document.querySelector('#registerEmail').value.trim();
+  const username = document.querySelector('#regUsername').value.trim();
+  const password = document.querySelector('#registerPassword').value.trim();
   if (email && password && username) {
-    const response = await fetch('/api/user', {
+    const response = await fetch('/api/users', {
       method: 'POST',
       body: JSON.stringify({ username, email, password }),
       headers: { 'Content-Type': 'application/json' },
     });
 
     if (response.ok) {
-      document.location.replace('/dashboard');
+      document.querySelector('#registerEmail').value = '';
+      document.querySelector('#regUsername').value = '';
+      document.querySelector('#registerPassword').value = '';
+      document.location.replace('/');
     } else {
       alert('Failed to sign up!');
     }
   } else alert('Please fill the form');
 };
 
-document.querySelector('#signup-form').addEventListener('submit', signupForm);
+document
+  .querySelector('#register-Modal')
+  .addEventListener('submit', signupForm);
