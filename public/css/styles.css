@@ -178,16 +178,27 @@
 .small-create-btn {
     display: flex;
     margin: auto;
+    margin-top: 10px;
     font-size: 15px;
     font-weight: 700;
     background-color: #EB5E28; 
     color:white;
-    padding: 0 10px;
+    padding: 0 20px;
     border: 1px solid #EB5E28;
     border-radius: 20px;
     box-shadow: 0 3px 3px rgba(0,0, 0, 35%);
     outline: none;
     outline-style: none;
+}
+
+#edit-post {
+    background-color: #403D39;
+    border: 1px solid #403D39;
+    padding: 0 35px;
+}
+
+#edit-post:hover {
+    box-shadow: 0 0px 15px #403D39;
 }
 
 .small-create-btn:hover{
@@ -400,6 +411,23 @@
     border-radius: 20px;
     box-shadow: 0 3px 3px rgba(0,0, 0, 35%);
     outline: 0;
+}
+
+#confirm-change-btn {
+    margin-left: 250px;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: #EB5E28; 
+    color:white;
+    padding: 5px 30px;
+    border: 1px solid #EB5E28;
+    border-radius: 20px;
+    box-shadow: 0 3px 3px rgba(0,0, 0, 35%);
+    outline: 0;
+}
+
+#confirm-change-btn:hover {
+    box-shadow: 0 0 16px #EB5E28;
 }
 
 .buttons {
