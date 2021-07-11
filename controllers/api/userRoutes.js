@@ -16,7 +16,9 @@ router.post(
   '/',
   authConfig.authenticate('local-signup', {
     successRedirect: '/',
+    failureRedirect: '/login',
   })
+
   // async (req, res) => {
   //   // try {
   //   //   // const userData = await User.create({

@@ -39,7 +39,6 @@ passport.use(
     async function (req, email, password, done) {
       let user = await User.findOne({ where: { email: email } });
       if (user) {
-        alert('Found user');
         return done(null, false);
       }
       let newUser = await User.create({
