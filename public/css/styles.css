@@ -255,10 +255,17 @@
     font-weight: 700;
 }
 
-#typeEmail {
+.input-form {
     box-shadow: 0 3px 3px rgba(0,0, 0, 35%);
     width: 60%;
     margin: auto;
+}
+
+.register-label {
+    color: #EB5E28;
+    font-size: 26px;
+    padding-left: 7em;
+    font-weight: 700;
 }
 
 #pw-label {
@@ -266,25 +273,6 @@
     font-size: 26px;
     padding-left: 6em;
     font-weight: 700;
-}
-
-#typePassword {
-    box-shadow: 0 3px 3px rgba(0,0, 0, 35%);
-    width: 60%;
-    margin: auto;
-}
-
-
-#typeUsername {
-    box-shadow: 0 3px 3px rgba(0,0, 0, 35%);
-    width: 60%;
-    margin: auto;
-}
-
-#confirmPassword{
-    box-shadow: 0 3px 3px rgba(0,0, 0, 35%);
-    width: 60%;
-    margin: auto;
 }
 
 #username-label {
@@ -299,15 +287,22 @@
     margin-bottom: 30px;
 }
 
-.orange-btn{
+.orange-btn {
     background-color: #EB5E28;
     border: 1px solid #EB5E28; 
-    
 }
 
 .grey-btn {
     background-color: #403D39;
     border: 1px solid #403D39;
+    margin: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 5px 40px;
+    color:white;
+    border-radius: 20px;
+    box-shadow: 0 3px 3px rgba(0,0, 0, 35%);
+    outline: 0;
 }
 
 #login-modal-login-btn {
@@ -457,12 +452,10 @@
     display: flex;
     flex-direction: column;
     justify-content:space-evenly;
-    align-items: flex-start;
+    align-items: center;
     height: 100px;
-}
-
-.register-modal-buttons {
     margin: 20px;
+    padding: 0;
 }
 
 .fail {
@@ -474,6 +467,7 @@
 .hide {
     display: none;
 }
+
 
 @media (max-width:1320px) {
     #myEvents {
