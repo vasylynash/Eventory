@@ -94,8 +94,8 @@
                   </div>
                   <div class="buttons">
                     {{!-- buttons --}}
-                    <button type="button" class="register-modal-buttons grey-btn" id="modal-register-btn1" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#register-Modal">Sign Up</button>
                     <button type="submit" class="register-modal-buttons orange-btn" id="login-modal-login-btn" data-bs-toggle="modal">Login</button>
+                    <button type="button" class="register-modal-buttons grey-btn" id="modal-register-btn1" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#register-Modal">Sign Up</button>
                   </div>
                 </form>
             </div>
@@ -114,7 +114,7 @@
               <form>
                 <div class="form-outline">
 
-                    <p class="fail" id="register-failed">Failed to Sign up. Please try again.</p>
+                    <p class="fail hide" id="register-failed">Failed to Sign up. Please try again.</p>
                     <label class="form-label register-label" for="regUsername" id="username-label">Username</label>
                     <input type="username" id="regUsername" class="form-control input-form" />
 
@@ -188,7 +188,7 @@
                   <textarea class="form-control long-input" id="event-description" rows="4"></textarea>
                 </div>
                 <!-- Submit button -->
-                <button type="submit" class="btn-primary" id="modal-create-event-btn" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#Modal">Create Event</button>
+                <button type="submit" class="btn-primary" id="modal-create-event-btn">Create Event</button>
               </form>
             </div>
           </div>
