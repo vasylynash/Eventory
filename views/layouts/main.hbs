@@ -84,17 +84,18 @@
             <div class="modal-body" id="modal-bc">
               <form>
                 <div class="form-outline">
+                    <p class="fail hide" id="login-failed">Failed to login. Please try again.</p>
                     <label class="form-label" for="login-typeEmail" id="email-label">Email</label>
-                    <input type="email" id="login-typeEmail" class="form-control input-form" />
+                    <input type="email" id="login-typeEmail" class="form-control input-form long-input" />
                   </div>
                   <div class="form-outline">
                     <label class="form-label" for="login-typePassword" id="pw-label">Password</label>
-                    <input type="password" id="login-typePassword" class="form-control input-form" />
+                    <input type="password" id="login-typePassword" class="form-control input-form long-input" />
                   </div>
                   <div class="buttons">
                     {{!-- buttons --}}
                     <button type="button" class="register-modal-buttons grey-btn" id="modal-register-btn1" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#register-Modal">Sign Up</button>
-                    <button type="submit" class="register-modal-buttons orange-btn" id="login-modal-login-btn" data-bs-dismiss="modal" data-bs-toggle="modal">Login</button>
+                    <button type="submit" class="register-modal-buttons orange-btn" id="login-modal-login-btn" data-bs-toggle="modal">Login</button>
                   </div>
                 </form>
             </div>
@@ -112,8 +113,11 @@
             <div class="modal-body" id="modal-bc">
               <form>
                 <div class="form-outline">
+
+                    <p class="fail" id="register-failed">Failed to Sign up. Please try again.</p>
                     <label class="form-label register-label" for="regUsername" id="username-label">Username</label>
                     <input type="username" id="regUsername" class="form-control input-form" />
+
                   </div>
                 <div class="form-outline">
                     <label class="form-label register-label" for="registerEmail" id="email-label">Email</label>
@@ -129,7 +133,7 @@
                   </div>
                   <div class="buttons">
                   {{!-- buttons --}}
-                  <button type="submit" class="register-modal-buttons orange-btn" data-bs-dismiss="modal" id="modal-register-btn">Sign Up</button>
+                  <button type="submit" class="register-modal-buttons orange-btn" id="modal-register-btn">Sign Up</button>
                   <button type="button" class="register-modal-buttons grey-btn" id="modal-login-btn" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#Modal">Login</button>
                 </div>
               </form>

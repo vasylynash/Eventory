@@ -8,7 +8,6 @@ const signupForm = async (event) => {
     /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
       email
     );
-
   if (email && password && username) {
     if (password === confirmPassword) {
       if (password.length >= 8) {
@@ -31,6 +30,8 @@ const signupForm = async (event) => {
         document.querySelector('#confirmPassword').value = '';
       }
     } else {
+      let regFailed = document.querySelector('#register-failed');
+      regFailed.className = 'fail'
       alert('Passwords dont match');
       document.querySelector('#registerPassword').value = '';
       document.querySelector('#confirmPassword').value = '';
