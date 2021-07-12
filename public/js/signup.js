@@ -22,7 +22,8 @@ const signupForm = async (event) => {
           document.querySelector('#registerPassword').value = '';
           document.location.replace('/');
         } else {
-          alert('Failed to sign up!');
+          let regFailed = document.querySelector('#register-failed');
+          regFailed.className = 'fail'
         }
       } else {
         alert('Password must have 8 characters or more');
@@ -30,8 +31,8 @@ const signupForm = async (event) => {
         document.querySelector('#confirmPassword').value = '';
       }
     } else {
-      let regFailed = document.querySelector('#register-failed');
-      regFailed.className = 'fail'
+      // let regFailed = document.querySelector('#register-failed');
+      // regFailed.className = 'fail'
       alert('Passwords dont match');
       document.querySelector('#registerPassword').value = '';
       document.querySelector('#confirmPassword').value = '';
