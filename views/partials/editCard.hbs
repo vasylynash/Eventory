@@ -1,50 +1,54 @@
 <div class="modal fade" id="edit-post-Modal-{{id}}" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="ModalLabel">Edit Event</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id='close-button'>X</button>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalLabel">Edit Event</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id='close-button'>X</button>
+      </div>
+      <div class="modal-body" id="modal-bc">
+        <form>
+          <!-- 2 column grid layout with text inputs for the first and last names -->
+          <div class="row mb-4">
+            <div class="col">
+              <div class="form-outline">
+                <label class="form-label create-label" for="form6">Edit Date</label>
+                <input type="date" id="edit-date-{{id}}" class="form-control"
+                  value="{{format_date_for_input dateTime}}" />
+              </div>
             </div>
-            <div class="modal-body" id="modal-bc">
-              <form>
-                <!-- 2 column grid layout with text inputs for the first and last names -->
-                <div class="row mb-4">
-                  <div class="col">
-                    <div class="form-outline">
-                      <label class="form-label create-label" for="form6">Edit Date</label>
-                      <input type="text" id="edit-date-{{id}}" class="form-control" value="{{format_date dateTime}}"/>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="form-outline">
-                      <label class="form-label create-label" for="form6">Edit Time</label>
-                      <input type="text" id="edit-time-{{id}}" class="form-control" value="{{format_time dateTime}}"/>
-                    </div>
-                  </div>
-                </div>
-                <!-- Event title input -->
-                <div class="form-outline mb-4">
-                  <label class="form-label create-label" for="form6">Edit Title</label>
-                  <input type="text" id="edit-title-{{id}}" class="form-control long-input" value="{{name}}" />
-                </div>
-                <!-- Adress input -->
-                <div class="form-outline mb-4">
-                  <label class="form-label create-label" for="form6">Edit Address</label>
-                  <input type="text" id="edit-adress-{{id}}" class="form-control long-input" value="{{location}}" />
-                </div>
-                <!-- Category input -->
-                <div class="form-outline mb-4">
-                  <label class="form-label create-label" for="form6">Edit Category</label>
-                  <input type="number" id="edit-category-{{id}}" class="form-control long-input" value="{{category_id}}" />
-                </div>
-                <!-- Description input -->
-                <div class="form-outline mb-4">
-                  <label class="form-label create-label" for="form6">Edit Description</label>
-                  <textarea class="form-control long-input" id="edit-description-{{id}}" rows="4">{{description}}</textarea>
-                </div>
-                <!-- Submit button -->
-                <button type="submit" class="btn-primary" id="confirm-change-btn" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#Modal">Confirm Change</button>
-              </form>
+            <div class="col">
+              <div class="form-outline">
+                <label class="form-label create-label" for="form6">Edit Time</label>
+                <input type="time" id="edit-time-{{id}}" class="form-control"
+                  value="{{format_time_for_input dateTime}}" />
+              </div>
             </div>
           </div>
+          <!-- Event title input -->
+          <div class="form-outline mb-4">
+            <label class="form-label create-label" for="form6">Edit Title</label>
+            <input type="text" id="edit-title-{{id}}" class="form-control long-input" value="{{name}}" />
+          </div>
+          <!-- Adress input -->
+          <div class="form-outline mb-4">
+            <label class="form-label create-label" for="form6">Edit Address</label>
+            <input type="text" id="edit-adress-{{id}}" class="form-control long-input" value="{{location}}" />
+          </div>
+          <!-- Category input -->
+          <div class="form-outline mb-4">
+            <label class="form-label create-label" for="form6">Edit Category</label>
+            <input type="number" id="edit-category-{{id}}" class="form-control long-input" value="{{category_id}}" />
+          </div>
+          <!-- Description input -->
+          <div class="form-outline mb-4">
+            <label class="form-label create-label" for="form6">Edit Description</label>
+            <textarea class="form-control long-input" id="edit-description-{{id}}" rows="4">{{description}}</textarea>
+          </div>
+          <!-- Submit button -->
+          <button type="submit" class="btn-primary" id="confirm-change-btn" data-bs-dismiss="modal"
+            data-bs-toggle="modal" data-bs-target="#Modal">Confirm Change</button>
+        </form>
       </div>
+    </div>
+  </div>
+</div>
