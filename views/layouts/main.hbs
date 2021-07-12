@@ -84,17 +84,18 @@
             <div class="modal-body" id="modal-bc">
               <form>
                 <div class="form-outline">
-                    <label class="form-label" for="typeEmail" id="email-label">Email</label>
-                    <input type="email" id="typeEmail" class="form-control" />
+                    <p class="fail hide" id="login-failed">Failed to login. Please try again.</p>
+                    <label class="form-label" for="login-typeEmail" id="email-label">Email</label>
+                    <input type="email" id="login-typeEmail" class="form-control input-form long-input" />
                   </div>
                   <div class="form-outline">
-                    <label class="form-label" for="typePassword" id="pw-label">Password</label>
-                    <input type="password" id="typePassword" class="form-control" />
+                    <label class="form-label" for="login-typePassword" id="pw-label">Password</label>
+                    <input type="password" id="login-typePassword" class="form-control input-form long-input" />
                   </div>
                   <div class="buttons">
                     {{!-- buttons --}}
-                    <button type="button" class="register-modal-buttons grey-btn" id="modal-register-btn" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#register-Modal">Sign Up</button>
-                    <button type="submit" class="register-modal-buttons orange-btn" id="modal-login-btn" data-bs-dismiss="modal" data-bs-toggle="modal">Login</button>
+                    <button type="button" class="register-modal-buttons grey-btn" id="modal-register-btn1" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#register-Modal">Sign Up</button>
+                    <button type="submit" class="register-modal-buttons orange-btn" id="login-modal-login-btn" data-bs-toggle="modal">Login</button>
                   </div>
                 </form>
             </div>
@@ -112,33 +113,35 @@
             <div class="modal-body" id="modal-bc">
               <form>
                 <div class="form-outline">
-                    <label class="form-label" for="typeUsername" id="username-label">Username</label>
-                    <input type="username" id="typeUsername" class="form-control" />
+                    <p class="fail" id="register-failed">Failed to Sign up. Please try again.</p>
+                    <label class="form-label register-label" for="typeUsername" id="username-label">Username</label>
+                    <input type="username" id="typeUsername" class="form-control input-form" />
                   </div>
                 <div class="form-outline">
-                    <label class="form-label" for="typeEmail" id="email-label">Email</label>
-                    <input type="email" id="typeEmail" class="form-control" />
+                    <label class="form-label register-label" for="typeEmail" id="email-label">Email</label>
+                    <input type="email" id="typeEmail" class="form-control input-form" />
                   </div>
                   <div class="form-outline">
-                    <label class="form-label" for="typePassword" id="pw-label">Password</label>
-                    <input type="password" id="typePassword" class="form-control" />
+                    <label class="form-label register-label" for="typePassword" id="pw-label">Password</label>
+                    <input type="password" id="typePassword" class="form-control input-form" />
                   </div>
                   <div class="form-outline">
-                    <label class="form-label" for="confirmPassword" id="confirm-pw-label">Confirm Password</label>
-                    <input type="password" id="confirmPassword" class="form-control" />
+                    <label class="form-label register-label" for="confirmPassword" id="confirm-pw-label">Confirm Password</label>
+                    <input type="password" id="confirmPassword" class="form-control input-form" />
                   </div>
                   <div class="buttons">
                   {{!-- buttons --}}
-                  <button type="submit" class="register-modal-buttons orange-btn" data-bs-dismiss="modal" id="modal-register-btn">Sign Up</button>
+                  <button type="submit" class="register-modal-buttons orange-btn" id="modal-register-btn">Sign Up</button>
                   <button type="button" class="register-modal-buttons grey-btn" id="modal-login-btn" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#Modal">Login</button>
                 </div>
               </form>
             </div>
+
           </div>
         </div>
       </div>
             {{!-- create Event Modal --}}
-      <div class="modal fade" id="create-event-Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+            <div class="modal fade" id="create-event-Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header">

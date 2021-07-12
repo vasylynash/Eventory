@@ -13,7 +13,8 @@ const loginFormHandler = async (event) => {
     if (response.ok) {
       document.location.replace('/');
     } else {
-      alert('Failed to log in');
+      let loginFailed = document.querySelector('#login-failed');
+      loginFailed.className = 'fail';
     }
   }
 };

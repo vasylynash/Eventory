@@ -302,11 +302,23 @@
 .orange-btn{
     background-color: #EB5E28;
     border: 1px solid #EB5E28; 
+    
 }
 
 .grey-btn {
     background-color: #403D39;
     border: 1px solid #403D39;
+}
+
+#login-modal-login-btn {
+    margin: auto;
+    font-size: 20px;
+    font-weight: 700;
+    color:white;
+    padding: 5px 54px;
+    border-radius: 20px;
+    box-shadow: 0 3px 3px rgba(0,0, 0, 35%);
+    outline: 0;
 }
 
 #modal-login-btn {
@@ -321,6 +333,17 @@
 }
 
 #modal-register-btn {
+    margin: auto;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 5px 40px;
+    color:white;
+    border-radius: 20px;
+    box-shadow: 0 3px 3px rgba(0,0, 0, 35%);
+    outline: 0;
+}
+
+#modal-register-btn1 {
     margin: auto;
     font-size: 20px;
     font-weight: 700;
@@ -440,6 +463,16 @@
 
 .register-modal-buttons {
     margin: 20px;
+}
+
+.fail {
+    text-align: center;
+    font-weight: 700;
+    color: red;
+}
+
+.hide {
+    display: none;
 }
 
 @media (max-width:1320px) {
