@@ -1,6 +1,7 @@
 const User = require('./User');
 const Event = require('./Event');
 const Category = require('./Category');
+const Participants = require('./Participants');
 
 User.hasMany(Event, {
     foreignKey: 'owner_id',
@@ -17,16 +18,19 @@ Category.hasMany(Event, {
 });
 
 User.belongsToMany(Event, {
-    through: "participants",
+    through: 'participants',
     unique: false,
     foreignKey: "user_id",
+    as: 'joined'
 });
 
 Event.belongsToMany(User, {
-    through: "participants",
+    through: 'participants',
     unique: false,
     onDelete: "CASCADE",
     foreignKey: "event_id",
-})
+    as: 'participant'
 
-module.exports = { Event, User, Category };
+});
+
+module.exports = { Event, User, Category, Participants };
