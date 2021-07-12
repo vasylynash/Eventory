@@ -11,6 +11,11 @@
             {{/each}}
         </div>
     </div>
+    <div class="edit-post-modal">
+        {{#each events as |event|}}
+        {{> editCard}}
+        {{/each}}
+    </div>
 </div>
 <div class="event-title-container">
     <h1 class="event-title">Joined Events</h1>

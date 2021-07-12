@@ -34,4 +34,26 @@
       </div>
     </div>
   </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item expanded-modal-list">Date:<span class="expanded-card-li"> {{format_date
+        dateTime}}</span></li>
+    <li class="list-group-item expanded-modal-list">Time:<span class="expanded-card-li"> {{format_time
+        dateTime}}</span></li>
+    <li class="list-group-item expanded-modal-list">Location: <span class="expanded-card-li">
+        {{location}}</span></li>
+  </ul>
+  {{#if user.id}}
+  <div class="card-body">
+    <a href="#" data-bs-dismiss="modal" class="card-link join-event-btn expanded-join-btn">Join Event</a>
+  </div>
+  {{else}}
+  <div class="card-body">
+    <a href="#" data-bs-dismiss="modal" class="card-link join-event-btn expanded-join-btn" data-bs-toggle="modal"
+      data-bs-target="#Modal">Join Event</a>
+  </div>
+  {{/if}}
+</div>
+</div>
+</div>
+</div>
 </div>

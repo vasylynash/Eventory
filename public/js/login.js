@@ -1,8 +1,8 @@
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
-  const email = document.querySelector('#typeEmail').value.trim();
-  const password = document.querySelector('#typePassword').value.trim();
+  const email = document.querySelector('#login-typeEmail').value.trim();
+  const password = document.querySelector('#login-typePassword').value.trim();
 
   if (email && password) {
     const response = await fetch('/api/users/login', {
@@ -13,11 +13,12 @@ const loginFormHandler = async (event) => {
     if (response.ok) {
       document.location.replace('/');
     } else {
-      alert('Failed to log in');
+      let loginFailed = document.querySelector('#login-failed');
+      loginFailed.className = 'fail';
     }
   }
 };
 
 document
-  .querySelector('#modal-login-btn')
+  .querySelector('#login-modal-login-btn')
   .addEventListener('click', loginFormHandler);
