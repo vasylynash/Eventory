@@ -1,13 +1,15 @@
 const createEvent = async (event) => {
   event.preventDefault();
   const eventDateTime =
-    document.querySelector('#form4').value.trim() +
+    document.querySelector('#event-date').value.trim() +
     ' ' +
-    document.querySelector('#form5').value.trim();
-  const eventTitle = document.querySelector('#form6').value.trim();
-  const eventAddress = document.querySelector('#form7').value.trim();
-  const eventCategory = document.querySelector('#form8').value.trim();
-  const eventDescription = document.querySelector('#form9').value.trim();
+    document.querySelector('#event-time').value.trim();
+  const eventTitle = document.querySelector('#event-title').value.trim(); //edit ids
+  const eventAddress = document.querySelector('#event-address').value.trim();
+  const eventCategory = document.querySelector('#event-category').value.trim();
+  const eventDescription = document
+    .querySelector('#event-description')
+    .value.trim();
   if (
     eventDateTime &&
     eventTitle &&
