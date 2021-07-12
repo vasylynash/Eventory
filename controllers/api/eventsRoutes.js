@@ -24,12 +24,11 @@ router.put('/:id', withAuth, async (req, res) => {
   try {
     const eventUdate = await Event.update(
       {
-        name: req.body.title,
-        description: req.body.description,
-        location: req.body.location,
+        name: req.body.eventTitle,
+        description: req.body.eventDescription,
+        location: req.body.eventAddress,
         dateTime: req.body.dateTime,
-        category_id: req.body.category_id,
-        owner_id: req.user.id,
+        category_id: req.body.eventCategory,
       },
       {
         where: {
@@ -56,7 +55,5 @@ router.delete('/:id', withAuth, async (req, res) => {
     res.status(400).json(error);
   }
 });
-
-// Get one Event Route
 
 module.exports = router;

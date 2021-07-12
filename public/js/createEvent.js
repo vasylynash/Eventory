@@ -4,7 +4,7 @@ const createEvent = async (event) => {
     document.querySelector('#event-date').value.trim() +
     ' ' +
     document.querySelector('#event-time').value.trim();
-  const eventTitle = document.querySelector('#event-title').value.trim(); //edit ids
+  const eventTitle = document.querySelector('#event-title').value.trim();
   const eventAddress = document.querySelector('#event-address').value.trim();
   const eventCategory = document.querySelector('#event-category').value.trim();
   const eventDescription = document
