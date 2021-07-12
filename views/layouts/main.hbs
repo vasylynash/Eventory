@@ -112,16 +112,16 @@
             <div class="modal-body" id="modal-bc">
               <form>
                 <div class="form-outline">
-                    <label class="form-label register-label" for="typeUsername" id="username-label">Username</label>
-                    <input type="username" id="typeUsername" class="form-control input-form" />
+                    <label class="form-label register-label" for="regUsername" id="username-label">Username</label>
+                    <input type="username" id="regUsername" class="form-control input-form" />
                   </div>
                 <div class="form-outline">
-                    <label class="form-label register-label" for="typeEmail" id="email-label">Email</label>
-                    <input type="email" id="typeEmail" class="form-control input-form" />
+                    <label class="form-label register-label" for="registerEmail" id="email-label">Email</label>
+                    <input type="email" id="registerEmail" class="form-control input-form" />
                   </div>
                   <div class="form-outline">
-                    <label class="form-label register-label" for="typePassword" id="pw-label">Password</label>
-                    <input type="password" id="typePassword" class="form-control input-form" />
+                    <label class="form-label register-label" for="registerPassword" id="pw-label">Password</label>
+                    <input type="password" id="registerPassword" class="form-control input-form" />
                   </div>
                   <div class="form-outline">
                     <label class="form-label register-label" for="confirmPassword" id="confirm-pw-label">Confirm Password</label>
@@ -152,36 +152,36 @@
                 <div class="row mb-4">
                   <div class="col">
                     <div class="form-outline">
-                      <label class="form-label create-label" for="form6">Event Date</label>
-                      <input type="date" id="form4" class="form-control"/>
+                      <label class="form-label create-label" for="event-title">Event Date</label>
+                      <input type="date" id="event-date" class="form-control"/>
                     </div>
                   </div>
                   <div class="col">
                     <div class="form-outline">
-                      <label class="form-label create-label" for="form6">Event Time</label>
-                      <input type="time" id="form5" class="form-control" />
+                      <label class="form-label create-label" for="event-title">Event Time</label>
+                      <input type="time" id="event-time" class="form-control" />
                     </div>
                   </div>
                 </div>
                 <!-- Event title input -->
                 <div class="form-outline mb-4">
-                  <label class="form-label create-label" for="form6">Event Title</label>
-                  <input type="text" id="form6" class="form-control long-input" />
+                  <label class="form-label create-label" for="event-title">Event Title</label>
+                  <input type="text" id="event-title" class="form-control long-input" />
                 </div>
                 <!-- Adress input -->
                 <div class="form-outline mb-4">
-                  <label class="form-label create-label" for="form6">Address</label>
-                  <input type="text" id="form7" class="form-control long-input" placeholder="123 Street ave, City, CA, 12345" />
+                  <label class="form-label create-label" for="event-title">Address</label>
+                  <input type="text" id="event-address" class="form-control long-input" placeholder="123 Street ave, City, CA, 12345" />
                 </div>
                 <!-- Category input -->
                 <div class="form-outline mb-4">
-                  <label class="form-label create-label" for="form6">Event Category</label>
-                  <input type="number" id="form8" class="form-control long-input" placeholder="1" />
+                  <label class="form-label create-label" for="event-title">Event Category</label>
+                  <input type="number" id="event-category" class="form-control long-input" placeholder="1" />
                 </div>
                 <!-- Description input -->
                 <div class="form-outline mb-4">
-                  <label class="form-label create-label" for="form6">Event Description</label>
-                  <textarea class="form-control long-input" id="form9" rows="4"></textarea>
+                  <label class="form-label create-label" for="event-title">Event Description</label>
+                  <textarea class="form-control long-input" id="event-description" rows="4"></textarea>
                 </div>
                 <!-- Submit button -->
                 <button type="submit" class="btn-primary" id="modal-create-event-btn" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#Modal">Create Event</button>
@@ -196,7 +196,9 @@
   integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
 <script src="../../js/login.js"></script>
+<script src="../../js/signup.js"></script>
 {{#if user}}
+<script src="../../js/createEvent.js"></script>
 <script src="../../js/logout.js"></script>
 {{/if}}
 

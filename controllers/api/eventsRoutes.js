@@ -6,11 +6,11 @@ const withAuth = require('../../utils/auth');
 router.post('/', withAuth, async (req, res) => {
   try {
     const newEvent = await Event.create({
-      name: req.body.title,
-      description: req.body.description,
-      location: req.body.location,
-      dateTime: req.body.dateTime,
-      category_id: req.body.category_id,
+      name: req.body.eventTitle,
+      description: req.body.eventDescription,
+      location: req.body.eventAddress,
+      dateTime: req.body.eventDateTime,
+      category_id: req.body.eventCategory,
       owner_id: req.user.id,
     });
     res.redirect('/dashboard');
