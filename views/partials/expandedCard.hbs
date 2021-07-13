@@ -7,12 +7,12 @@
       <div class="modal-body">
         <!-- expanded card -->
         <div class="modal-card" style="width: 450px;">
-          <img src="../../assets/{{category_id}}.jpg" class="card-img-top" alt="Expanded Card Modal">
-          <div class="card-body">
+          <img src="../../assets/{{category_id}}.jpg" class="card-img-top expanded-card-img" alt="Expanded Card Modal">
+          <div class="card-body expanded-card-body">
             <h5 class="card-title expanded-card-title">{{name}}</h5>
             <p class="card-text expanded-card-text">{{description}}</p>
           </div>
-          <ul class="list-group list-group-flush">
+          <ul class="list-group list-group-flush expanded-card-list">
             <li class="list-group-item expanded-modal-list">Date:<span class="expanded-card-li"> {{format_date
                 dateTime}}</span></li>
             <li class="list-group-item expanded-modal-list">Time:<span class="expanded-card-li"> {{format_time
@@ -21,11 +21,11 @@
                 {{location}}</span></li>
           </ul>
           {{#if user}}
-          <div class="card-body">
+          <div class="card-body join-card-body">
             <a href="#" data-bs-dismiss="modal" class="card-link join-event-btn expanded-join-btn">Join Event</a>
           </div>
           {{else}}
-          <div class="card-body">
+          <div class="card-body join-card-body">
             <a href="#" data-bs-dismiss="modal" class="card-link join-event-btn expanded-join-btn"
               data-bs-toggle="modal" data-bs-target="#Modal">Join Event</a>
           </div>

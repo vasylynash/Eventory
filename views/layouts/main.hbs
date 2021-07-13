@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="../../css/styles.css">
-  <title>Eventory</title>
+  <title>Eventory: Find an event near you!</title>
 </head>
 
 <body>
@@ -34,6 +34,9 @@
           {{/if}}
           <li class="nav-item">
             <a class="nav-link" id="searchEvents" href="/">All Events</a>
+          </li>
+          <li>
+            <a href="#" class="login-register-small create-event-nav" data-bs-toggle="modal" data-bs-target="#create-event-Modal">Create Event</a>
           </li>
           {{#if user.id}}
           <li>
