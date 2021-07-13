@@ -12,23 +12,20 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-
-
 // handlebars engine
 const handlebars = require('express-handlebars');
 
 app.set('view engine', 'hbs');
 
-app.engine('hbs', handlebars({
-  layoutsDir: `${__dirname}/views/layouts`,
-  extname: 'hbs',
-  partialsDir:`${__dirname}/views/partials`,
-  helpers: require('./utils/helpers'),
-}));
-
-
-
-// const hbs = exphbs.create({ helpers });
+app.engine(
+  'hbs',
+  handlebars({
+    layoutsDir: `${__dirname}/views/layouts`,
+    extname: 'hbs',
+    partialsDir: `${__dirname}/views/partials`,
+    helpers: require('./utils/helpers'),
+  })
+);
 
 const sess = {
   secret: 'Super secret secret',
@@ -36,8 +33,8 @@ const sess = {
   resave: false,
   saveUninitialized: false,
   store: new SequelizeStore({
-    db: sequelize
-  })
+    db: sequelize,
+  }),
 };
 
 app.use(session(sess));
@@ -48,9 +45,9 @@ app.use(authConfig.session());
 /* Middleware that register user global variable for the request (to make it available in handlebars)
 Must be after passport middleware
 */
-app.use(function(req,res,next){
+app.use(function (req, res, next) {
   if (req.user) {
-    res.locals.user = req.user.get({plain: true});
+    res.locals.user = req.user.get({ plain: true });
   }
   next();
 });

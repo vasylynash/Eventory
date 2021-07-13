@@ -1,14 +1,33 @@
-<div class="col">
-    <!-- Event Card -->
-<div class="card" style="width: 20rem;">
-    <img src="../../assets/{{category_id}}.jpg" class="card-img-top" alt="Event card">
-    <div class="card-body">
-        <h3 class="card-title">{{name}}</h3>
-        <p class="card-text">Date:<span class="event-date">{{format_date dateTime}}</span></p>
-        <p class="card-text">Time:<span class="event-time">{{format_time dateTime}}</span></p>
-        <button class="small-create-btn" id="delete-post">Remove</button>
-        <button class="small-create-btn" id="edit-post" data-bs-toggle="modal" data-bs-target="#edit-post-Modal-{{id}}">Edit</button>
-        <p class="created-by">Event created by: <span class='creator-username'>{{user.username}}</span></p>
+<div class='col'>
+  <!-- Event Card -->
+  <div class='card' style='width: 20rem;'>
+    <img
+      src='../../assets/{{category_id}}.jpg'
+      class='card-img-top'
+      alt='Event card'
+    />
+    <div class='card-body'>
+      <h3 class='card-title'>{{name}}</h3>
+      <p class='card-text'>Date:<span class='event-date'>{{format_date
+            dateTime
+          }}</span></p>
+      <p class='card-text'>Time:<span class='event-time'>{{format_time
+            dateTime
+          }}</span></p>
+      <button
+        class='small-create-btn remove-my-card'
+        id='delete-post-{{id}}'
+        data-value='{{id}}'
+      >Remove</button>
+      <span class='card-id-holder' style='visibility: hidden'>{{id}}</span>
+      <button
+        class='small-create-btn'
+        id='edit-post'
+        data-bs-toggle='modal'
+        data-bs-target='#edit-post-Modal-{{id}}'
+      >Edit</button>
+      <p class='created-by'>Event created by:
+        <span class='creator-username'>{{user.username}}</span></p>
     </div>
-    </div>
+  </div>
 </div>
