@@ -1,23 +1,62 @@
 [
   {
-    "title": "Birthday Party"
+    "title": "Hiking"
   },
   {
-    "title": "Pool Party"
-  },
-  {
-    "title": "Coding"
-  },
-  {
-    "title": "Yoga Class"
+    "title": "Camping"
   },
   {
     "title": "Fishing"
   },
   {
-    "title": "Dog Walking"
+    "title": "Biking"
   },
   {
-    "title": "Have Fun"
+    "title": "Swimming"
+  },
+  {
+    "title": "Political Event"
+  },
+  {
+    "title": "Birthday"
+  },
+  {
+    "title": "Social Gathering"
+  },
+  {
+    "title": "Coffee Date"
+  },
+  {
+    "title": "Workshop"
+  },
+  {
+    "title": "Yoga"
+  },
+  {
+    "title": "Workout"
+  },
+  {
+    "title": "Party"
+  },
+  {
+    "title": "Beach"
+  },
+  {
+    "title": "Breakfast"
+  },
+  {
+    "title": "Lunch"
+  },
+  {
+    "title": "Dinner"
+  },
+  {
+    "title": "Sports Event"
+  },
+  {
+    "title": "Concert"
+  },
+  {
+    "title": "Charity Event"
   }
 ]
