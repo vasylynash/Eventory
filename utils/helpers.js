@@ -30,6 +30,8 @@ module.exports = {
   },
 
   isOwner: (arg, arg1) => {
+    console.log('Owner_id: ' + arg);
+    console.log('Current user id: ' + arg1);
     return arg === arg1;
   }
 };
