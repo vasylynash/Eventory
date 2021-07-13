@@ -26,6 +26,10 @@ module.exports = {
     for (let i = 0; i < arr.length; i++) {
       str += arr[i].username + ', ';
     }
-    return str.slice(0, str.length-2);
+    return str.slice(0, str.length - 2);
+  },
+
+  isOwner: (arg, arg1) => {
+    return arg === arg1;
   }
 };
