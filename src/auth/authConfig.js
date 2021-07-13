@@ -12,7 +12,7 @@ passport.use(
       passwordField: 'password',
     },
     async function (username, password, done) {
-      const userData = await User.findOne({ where: { email: username } });
+      const userData = await User.scope('withPassword').findOne({ where: { email: username } });
       if (!userData) {
         done(null, false, { message: 'Invalid username and password.' });
         return;
