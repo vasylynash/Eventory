@@ -8,13 +8,17 @@ router.get('/', async function (req, res) {
     include: [
       {
         model: User,
+        attributes: ['username'],
+      },
+      {
+        model: User,
+        as: 'participant',
         attributes: ['username']
       }
     ]
   });
 
-  const events = eventData.map((el) => el.get({ plain: true })); 
-  
+  const events = eventData.map((el) => el.get({ plain: true, nested: true })); 
   res.render('all',{
     events
   });

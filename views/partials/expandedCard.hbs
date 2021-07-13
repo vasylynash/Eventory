@@ -26,10 +26,17 @@
           </div>
           {{else}}
           <div class="card-body">
-            <a href="#" data-bs-dismiss="modal" class="card-link join-event-btn expanded-join-btn" data-bs-toggle="modal" data-bs-target="#Modal">Join Event</a>
+            <a href="#" data-bs-dismiss="modal" class="card-link join-event-btn expanded-join-btn"
+              data-bs-toggle="modal" data-bs-target="#Modal">Join Event</a>
           </div>
           {{/if}}
         </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item expanded-modal-list">Attending:<span class="expanded-card-li">
+              {{participant.length}}</span></li>
+          <li class="list-group-item expanded-modal-list">Participants list:<span class="expanded-card-li">
+              {{generate_list participant}}</span></li>
+        </ul>
       </div>
     </div>
   </div>
