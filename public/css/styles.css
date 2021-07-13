@@ -414,6 +414,10 @@
     color: #EB5E28;
 }
 
+.create-event-nav {
+    display: none;
+}
+
 .long-input {
     width: 60%;
 }
@@ -533,6 +537,10 @@
     #ModalLabel {
         font-size: 45px;
     }
+
+    .create-event-nav {
+        display: none;
+    }
     
 }
 
@@ -548,6 +556,80 @@
     .card {
         width: 100%;
         margin-top: auto;
+    }
+    
+    .hero {
+        display: none;
+    }
+
+    #logo {
+        text-align: center;
+        margin: auto;
+    }
+
+    #navbarNav {
+        text-align: center;
+        margin-right: 10%;
+
+    }
+
+    .navbar-toggler {
+        margin: 0;
+        padding: 0;
+    }
+
+    .create-event-nav {
+        display: block;
+    }
+    
+    .create-label {
+        font-size: 20px;
+    }
+
+    #confirm-change-btn {
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+
+    }
+
+}
+
+@media (max-width:485px) {
+    .expanded-card-img {
+        width: 320px;
+        height: 200px;
+    }
+
+    .expanded-card-body {
+        width: 350px;
+    }
+
+    .expanded-card-list {
+        width: 340px;
+    }
+
+    .expanded-join-btn {
+        font-size: 18px;
+        margin-left: -20px;
+        padding: 3px 20px;
+    }
+
+    .join-card-body {
+        text-align: center;
+        width: 350px;
+    }
+
+    #ModalLabel {
+        font-size: 30px;
+    }
+
+    #modal-create-event-btn {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        padding: 3px 20px;
     }
 }
 
