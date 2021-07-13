@@ -16,5 +16,16 @@ module.exports = {
     let date = new Date(dateStr);
     date.setTime(date.getTime() - date.getTimezoneOffset() * 60000);
     return new Date(date).toISOString().substring(11,16);
+  },
+
+  generate_list: (arr) => {
+    if (arr.length === 0) {
+      return '';
+    }
+    let str = '';
+    for (let i = 0; i < arr.length; i++) {
+      str += arr[i].username + ', ';
+    }
+    return str.slice(0, str.length-2);
   }
 };
