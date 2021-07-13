@@ -41,7 +41,7 @@ Must be after passport middleware
 */
 app.use(function (req, res, next) {
   if (req.user) {
-    res.locals.user = req.user.get({ plain: true });
+    res.locals.currentUser = req.user.get({ plain: true });
   }
   next();
 });

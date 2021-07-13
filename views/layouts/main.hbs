@@ -22,7 +22,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-          {{#if user.id}}
+          {{#if currentUser}}
           <li class="nav-item">
             <a class="nav-link active" id="myEvents" aria-current="page" href="/dashboard">My Events</a>
           </li>
@@ -35,7 +35,7 @@
           <li class="nav-item">
             <a class="nav-link" id="searchEvents" href="/">All Events</a>
           </li>
-          {{#if user.id}}
+          {{#if currentUser}}
           <li>
             <a href="#" class="login-register-small" data-bs-toggle="modal" id="logout-collapsed">Logout</a>
           </li>
@@ -52,7 +52,7 @@
       </div>
       {{!-- if logged in display logout button --}}
       <ul class="nav navbar-nav navbar-right">
-        {{#if user.id}}
+        {{#if currentUser}}
         <li><a href="#" class="login-register" id="logout">Logout</a></li>
         {{else}}
         <li><a href="#" class="login-register" data-bs-toggle="modal" data-bs-target="#register-Modal">Sign Up</a></li>
@@ -68,7 +68,7 @@
       <h1 class="hero-text">Find new places.</h1>
       <h1 class="hero-text">Create new memories.</h1>
     </div>
-    {{#if user.id}}
+    {{#if currentUser}}
     <button id="large-create-btn" data-bs-toggle="modal" data-bs-target="#create-event-Modal">Create Event</button>
     {{else}}
     <button id="large-create-btn" data-bs-toggle="modal" data-bs-target="#Modal">Create Event</button>
@@ -212,7 +212,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
 <script src="../../js/login.js"></script>
 <script src="../../js/signup.js"></script>
-{{#if user}}
+{{#if currentUser}}
 <script src="../../js/createEvent.js"></script>
 <script src="../../js/editEvent.js"></script>
 <script src="../../js/deleteEvent.js"></script>
