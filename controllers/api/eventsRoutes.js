@@ -27,7 +27,7 @@ router.put('/:id', withAuth, async (req, res) => {
         name: req.body.eventTitle,
         description: req.body.eventDescription,
         location: req.body.eventAddress,
-        dateTime: req.body.dateTime,
+        dateTime: req.body.eventDateTime,
         category_id: req.body.eventCategory,
       },
       {
