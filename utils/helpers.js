@@ -20,12 +20,20 @@ module.exports = {
 
   generate_list: (arr) => {
     if (arr.length === 0) {
-      return '';
+      return 'No one has joined yet';
     }
     let str = '';
     for (let i = 0; i < arr.length; i++) {
       str += arr[i].username + ', ';
     }
-    return str.slice(0, str.length-2);
+    return str.slice(0, str.length - 2);
+  },
+
+  isOwner: (arg, arg1) => {
+    return arg === arg1;
+  },
+
+  log: (obj) => {
+    console.log(JSON.stringify(obj));
   }
 };

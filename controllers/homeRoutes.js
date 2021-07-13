@@ -56,7 +56,7 @@ router.get('/dashboard', withAuth, async function (req, res) {
 
   res.render('userCardsAll',{
     events,
-    joinedEvents
+    joinedEvents,
   });
   }
   catch(e) {
