@@ -37,9 +37,15 @@
           </li>
           {{#if currentUser}}
           <li>
+            <a href="#" class="login-register-small create-event-nav" data-bs-toggle="modal" data-bs-target="#create-event-Modal">Create Event</a>
+          </li>
+          <li>
             <a href="#" class="login-register-small" data-bs-toggle="modal" id="logout-collapsed">Logout</a>
           </li>
           {{else}}
+          <li>
+            <a href="#" class="login-register-small create-event-nav" data-bs-toggle="modal" data-bs-target="#Modal">Create Event</a>
+          </li>
           <li>
             <a href="#" class="login-register-small" href="#" class="login-register" data-bs-toggle="modal"
               data-bs-target="#register-Modal"> Sign Up</a>
