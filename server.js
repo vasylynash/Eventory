@@ -27,8 +27,8 @@ const sess = {
   resave: false,
   saveUninitialized: false,
   store: new SequelizeStore({
-    db: sequelize
-  })
+    db: sequelize,
+  }),
 };
 
 app.use(session(sess));
@@ -39,9 +39,9 @@ app.use(authConfig.session());
 /* Middleware that registers user global variable for the request (to make it available in handlebars)
 Must be after passport middleware
 */
-app.use(function(req,res,next){
+app.use(function (req, res, next) {
   if (req.user) {
-    res.locals.user = req.user.get({plain: true});
+    res.locals.user = req.user.get({ plain: true });
   }
   next();
 });
