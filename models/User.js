@@ -47,9 +47,9 @@ User.init(
         return updatedUserData;
       },
     },
-    defaultScope: {
-  attributes: { exclude: ['password'] },
-},
+//     defaultScope: {
+//   attributes: { exclude: ['password'] },
+// },
     sequelize,
     timestamps: false,
     freezeTableName: true,
