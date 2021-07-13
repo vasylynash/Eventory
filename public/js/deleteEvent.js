@@ -1,16 +1,19 @@
+const allRemoveBtns = document.querySelectorAll('.remove-my-card');
+
 const deleteEvent = async (event) => {
   event.preventDefault();
-  const cardid = document.querySelector('#card-id-holder').innerHTML;
+  cardid = event.target.getAttribute('data-value');
   console.log(cardid);
   const response = await fetch(`/api/events/${cardid}`, {
     method: 'DELETE',
   });
-
   if (response.ok) {
-    document.location.replace('/');
+    document.location.replace('/dashboard');
   } else {
     alert('Failed to delete event');
   }
 };
 
-document.querySelector('#delete-post').addEventListener('click', deleteEvent);
+allRemoveBtns.forEach(function (removeBtn) {
+  removeBtn.addEventListener('click', deleteEvent);
+});

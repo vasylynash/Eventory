@@ -14,8 +14,12 @@
       <p class='card-text'>Time:<span class='event-time'>{{format_time
             dateTime
           }}</span></p>
-      <button class='small-create-btn' id='delete-post'>Remove</button>
-      <span id='card-id-holder' style='visibility: hidden'>{{id}}</span>
+      <button
+        class='small-create-btn remove-my-card'
+        id='delete-post-{{id}}'
+        data-value='{{id}}'
+      >Remove</button>
+      <span class='card-id-holder' style='visibility: hidden'>{{id}}</span>
       <button
         class='small-create-btn'
         id='edit-post'
