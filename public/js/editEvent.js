@@ -1,6 +1,10 @@
+const allEditBtns = document.querySelectorAll('.edit-post-btn');
+
 const editEvent = async (event) => {
   event.preventDefault();
-  const eventid = document.querySelector('#id-holder').innerHTML;
+
+  const eventid = event.target.getAttribute('data-value');
+  console.log(eventid)
   const eventDateTime =
     document.querySelector(`#edit-date-${eventid}`).value.trim() +
     ' ' +
@@ -37,13 +41,16 @@ const editEvent = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/dashboard');
+     document.location.replace('/dashboard');
     } else {
       alert('Failed to edit event');
     }
   }
 };
 
-document
-  .querySelector('#confirm-change-btn')
-  .addEventListener('click', editEvent);
+
+allEditBtns.forEach(function (editBtn) {
+    editBtn.addEventListener('click', editEvent);
+  });
+
+
