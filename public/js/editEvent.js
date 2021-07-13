@@ -1,7 +1,6 @@
 const editEvent = async (event) => {
   event.preventDefault();
   const eventid = document.querySelector('#id-holder').innerHTML;
-  console.log(eventid);
   const eventDateTime =
     document.querySelector(`#edit-date-${eventid}`).value.trim() +
     ' ' +

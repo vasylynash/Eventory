@@ -1,8 +1,8 @@
 const deleteEvent = async (event) => {
   event.preventDefault();
-
-  console.log(hbs.eventid);
-  const response = await fetch(`/api/events/${eventid}`, {
+  const cardid = document.querySelector('#card-id-holder').innerHTML;
+  console.log(cardid);
+  const response = await fetch(`/api/events/${cardid}`, {
     method: 'DELETE',
   });
 
