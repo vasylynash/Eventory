@@ -20,6 +20,7 @@ const loginFormHandler = async (event) => {
   else {
     let loginFailed = document.querySelector('#login-failed');
       loginFailed.className = 'fail';
+      loginFailed.textContent = 'Please fill in the form';
   }
 };
 
