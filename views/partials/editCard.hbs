@@ -40,8 +40,8 @@
           <div class="form-outline mb-4">
             <label class="form-label create-label" for="form6">Edit Category</label>
             {{!-- <input type="number" id="edit-category-{{id}}" class="form-control long-input" value="{{category_id}}" /> --}}
-              <select name="event-category" class="form-control long-input" id="edit-dropdown-input">
-                {{!-- <option value="{{category_id}}" selected hidden='hidden'>{{category.title}}</option> --}}
+              <select name="event-category" class="form-control long-input edit-dropdown" id="dropdown{{id}}" data-value="{{id}}">
+                <option value="{{category_id}}" selected hidden='hidden'>{{category.title}}</option>
                 <option value="1">Hiking</option>
                 <option value="2">Camping</option>
                 <option value="3">Fishing</option>
