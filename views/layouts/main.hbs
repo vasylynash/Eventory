@@ -59,7 +59,10 @@
       {{!-- if logged in display logout button --}}
       <ul class="nav navbar-nav navbar-right">
         {{#if currentUser}}
-        <li><a href="#" class="login-register" id="logout">Logout</a></li>
+        <li class="logout-usr">
+          <h4 class="nav-username"><span class="welcome">Welcome,</span> {{currentUser.username}}!</h4>                    
+          <a href="#" class="login-register" id="logout">Logout</a>
+        </li>
         {{else}}
         <li><a href="#" class="login-register" data-bs-toggle="modal" data-bs-target="#register-Modal">Sign Up</a></li>
         <li><a href="#" class="login-register" data-bs-toggle="modal" data-bs-target="#Modal">Login</a></li>
@@ -167,13 +170,14 @@
             id='close-button'>X</button>
         </div>
         <div class="modal-body" id="modal-bc">
+          <p class="fail hide" id="create-failed">Failed to create event</p>
           <form>
             <!-- 2 column grid layout with text inputs for the first and last names -->
             <div class="row mb-4">
               <div class="col">
                 <div class="form-outline">
                   <label class="form-label create-label" for="event-title">Event Date</label>
-                  <input type="date" id="event-date" class="form-control" />
+                  <input type="date" id="event-date" class="form-control"/>
                 </div>
               </div>
               <div class="col">
@@ -198,18 +202,18 @@
             <div class="form-outline mb-4">
               <label class="form-label create-label" for="event-title">Event Category</label>
               <select name="event-category" class="form-control long-input" id="dropdown-input-create">
-                <option value="0" selected hidden>Choose event Categorty</option>
-                <option value="1">Hiking</option>
+                <option value="0" selected hidden>Choose event category</option>
+                <option value="1">Birthday</option>
                 <option value="2">Camping</option>
-                <option value="3">Fishing</option>
-                <option value="4">Biking</option>
-                <option value="5">Swimming</option>
+                <option value="3">Social Event</option>
+                <option value="4">Yoga</option>
+                <option value="5">Fishing</option>
                 <option value="6">Political Event</option>
-                <option value="7">Birthday</option>
-                <option value="8">Social Event</option>
-                <option value="9">Coffee </option>
-                <option value="10">Workshop</option>
-                <option value="11">Yoga</option>
+                <option value="7">Hiking</option>
+                <option value="8">Coffee</option>
+                <option value="9">Workshop </option>
+                <option value="10">Biking</option>
+                <option value="11">Swimming</option>
                 <option value="12">Workout </option>
                 <option value="13">Party </option>
                 <option value="14">Beach</option>

@@ -89,6 +89,28 @@
     padding: 5em;
 }
 
+.nav-username {
+    font-weight: 700;
+    font-size: 15px;
+    color: #EB5E28;
+    text-align:  center;
+    margin: auto;
+}
+
+.logout-usr {
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome {
+    color: black;
+}
+
+#logout {
+    font-size: 20px;
+    margin: auto;
+}
+
 #large-create-btn {
     display: flex;
     margin: 2% auto 5% auto;
