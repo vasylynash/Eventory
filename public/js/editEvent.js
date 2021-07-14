@@ -36,8 +36,13 @@ const editEvent = async (event) => {
     if (response.ok) {
      document.location.replace('/dashboard');
     } else {
-      alert('Failed to edit event');
+      let editFailed = document.querySelector('.editFailed');
+      editFailed.className = 'fail';
     }
+  } else {
+    let editFailed = document.querySelector('.editFailed');
+    editFailed.className = 'fail';
+    editFailed.textContent = 'Please fill out all fileds'
   }
 };
 

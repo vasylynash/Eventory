@@ -6,6 +6,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id='close-button'>X</button>
       </div>
       <div class="modal-body" id="modal-bc">
+        <p class="fail hide editFailed">Failed to edit event</p>
         <form>
           <!-- 2 column grid layout with text inputs for the first and last names -->
           <div class="row mb-4">
@@ -42,17 +43,17 @@
             {{!-- <input type="number" id="edit-category-{{id}}" class="form-control long-input" value="{{category_id}}" /> --}}
               <select name="event-category" class="form-control long-input edit-dropdown" id="dropdown{{id}}" data-value="{{id}}">
                 <option value="{{category_id}}" selected hidden='hidden'>{{category.title}}</option>
-                <option value="1">Hiking</option>
+                <option value="1">Birthday</option>
                 <option value="2">Camping</option>
-                <option value="3">Fishing</option>
-                <option value="4">Biking</option>
-                <option value="5">Swimming</option>
+                <option value="3">Social Event</option>
+                <option value="4">Yoga</option>
+                <option value="5">Fishing</option>
                 <option value="6">Political Event</option>
-                <option value="7">Birthday</option>
-                <option value="8">Social Event</option>
-                <option value="9">Coffee </option>
-                <option value="10">Workshop</option>
-                <option value="11">Yoga</option>
+                <option value="7">Hiking</option>
+                <option value="8">Coffee</option>
+                <option value="9">Workshop </option>
+                <option value="10">Biking</option>
+                <option value="11">Swimming</option>
                 <option value="12">Workout </option>
                 <option value="13">Party </option>
                 <option value="14">Beach</option>
@@ -74,7 +75,6 @@
             Change</button>
         </form>
       </div>
-
     </div>
   </div>
 </div>
