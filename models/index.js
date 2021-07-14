@@ -12,6 +12,10 @@ Event.belongsTo(User, {
     foreignKey: 'owner_id',
 });
 
+Event.belongsTo(Category, {
+    foreignKey: 'category_id'
+})
+
 Category.hasMany(Event, {
     foreignKey: 'category_id',
     onDelete: 'CASCADE',
