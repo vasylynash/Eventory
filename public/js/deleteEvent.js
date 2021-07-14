@@ -10,7 +10,7 @@ const deleteEvent = async (event) => {
   if (response.ok) {
     document.location.replace('/dashboard');
   } else {
-    alert('Failed to delete event');
+    console.log('Failed to delete event');
   }
 };
 

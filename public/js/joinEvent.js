@@ -21,11 +21,11 @@ const joinEvent = async (event) => {
           if (!userData.userExists === true){
             document.location.replace('/');
           } else {
-            alert("user exists Error")
+              event.target.innerHTML = 'Joined'
             }
         }
       else {
-        alert('Failed to join event');
+        console.log('Failed to join event');
       }
   };
   

@@ -16,7 +16,7 @@ const removeMyEvent = async (event) => {
   if (response.ok) {
     document.location.replace('/dashboard');
   } else {
-    alert('Failed to remove event');
+    console.log('Failed to remove event');
   }
 };
 
