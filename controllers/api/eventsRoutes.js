@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Event } = require('../../models');
+const { Event,Participants } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 //  Post Event Route
@@ -51,6 +51,34 @@ router.delete('/:id', withAuth, async (req, res) => {
       },
     });
     res.status(200).json(deleteEvent);
+  } catch (error) {
+    res.status(400).json(error);
+  }
+});
+
+// unjoin event
+router.delete('/unjoin/:id', withAuth, async (req, res) => {
+  try {
+    const deleteMyEvent = await Participants.destroy({
+      where: {
+        user_id: req.body.userId,
+        event_id: req.params.id
+      },
+    });
+    res.status(200).json(deleteMyEvent);
+  } catch (error) {
+    res.status(400).json(error);
+  }
+});
+
+// join event
+router.post('/join', withAuth, async (req, res) => {
+  try {
+    const newJoin = await Participants.create({
+      event_id: req.body.eventid,
+      user_id: req.body.currentuserid
+    });
+    res.redirect('/dashboard');
   } catch (error) {
     res.status(400).json(error);
   }

@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const authConfig = require('../../src/auth/authConfig');
-const { User } = require('../../models');
+const { User, Participants } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 router.post(
   '/login',
@@ -19,5 +20,7 @@ router.post(
     failureRedirect: '/login',
   })
 );
+
+
 
 module.exports = router;
