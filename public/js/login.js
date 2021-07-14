@@ -17,6 +17,10 @@ const loginFormHandler = async (event) => {
       loginFailed.className = 'fail';
     }
   }
+  else {
+    let loginFailed = document.querySelector('#login-failed');
+      loginFailed.className = 'fail';
+  }
 };
 
 document
