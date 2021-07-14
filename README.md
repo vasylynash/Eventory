@@ -21,16 +21,18 @@
   ## Usage
   [Deployed version](https://my-eventory.herokuapp.com/)
     
-On the **Home page** click the **Login** or **Sign Up** to log in/register new user. As an anonymous user, you can view events and info about them. After logging in or registering, you are redirected to the **Dashboard** page. The page lists all the events you've created and joined. Here, you can update or delete an event, and remove youself from an event.  
+On the **Home page** click the **Login** or **Sign Up** to log in/register new user. As an anonymous user, you can view events and info about them. After logging in or registering, you can join an event, update or delete an event, and remove youself from an event.  
 
 **All Events** page:
 
 To create a new event click the **Create Event** button, enter the date, time, title, address, description, and select the category. Click the **Create Event** button To save the event.  
 To join the event on the **All events** page, click **Learn more** button to open the event, and click **Join Event** button.  
 
-To delete an event, click the **Remove** button on the event card from your **Dashboard**. The event will be removed.  
+**Dashboard** page:  
 
-To update an event, click the **Edit** button on the event card from your **Dashboard**. The modal contains the existing info for the event. Make updates, and click the **Confirm change** button.  
+To delete an event, click the **Remove** button on the event card. The event will be removed from the list.  
+
+To update an event, click the **Edit** button on the event card. The modal contains the existing info for the event. Make updates, and click the **Confirm change** button.  
 
 **To run locally**:
 
