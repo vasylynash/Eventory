@@ -74,11 +74,20 @@ router.delete('/unjoin/:id', withAuth, async (req, res) => {
 // join event
 router.post('/join', withAuth, async (req, res) => {
   try {
-    const newJoin = await Participants.create({
-      event_id: req.body.eventid,
-      user_id: req.body.currentuserid
-    });
-    res.redirect('/dashboard');
+    const participantsData = await Participants.findOne({
+      where: {
+        event_id: req.body.eventid,
+        user_id: req.body.currentuserid
+      }
+    })
+    if (!participantsData){
+      const newJoin = await Participants.create({
+        event_id: req.body.eventid,
+        user_id: req.body.currentuserid
+      });
+      res.json({userExists: false});
+    } else res.json({userExists: true});
+
   } catch (error) {
     res.status(400).json(error);
   }

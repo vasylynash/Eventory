@@ -1,3 +1,5 @@
+
+
 const allJoinBtns = document.querySelectorAll('.join-event-btn');
 
 const joinEvent = async (event) => {
@@ -12,10 +14,17 @@ const joinEvent = async (event) => {
         }),
         headers: { 'Content-Type': 'application/json' },
       });
-  
+
+      const userData = await response.json();
+
       if (response.ok) {
-        document.location.replace('/');
-      } else {
+          if (!userData.userExists === true){
+            document.location.replace('/');
+          } else {
+            alert("user exists Error")
+            }
+        }
+      else {
         alert('Failed to join event');
       }
   };
