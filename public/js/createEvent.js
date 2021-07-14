@@ -8,7 +8,6 @@ const createEvent = async (event) => {
   const eventAddress = document.querySelector('#event-address').value.trim();
   const eventCategory = document.querySelector('#dropdown-input-create').value;
 
-console.log(eventCategory)
   const eventDescription = document
     .querySelector('#event-description')
     .value.trim();

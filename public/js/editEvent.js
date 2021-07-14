@@ -15,7 +15,6 @@ const editEvent = async (event) => {
     .value.trim();
   const eventCategory = document.querySelector('#edit-dropdown-input').value;
 
-  console.log(eventCategory)
   const eventDescription = document
     .querySelector(`#edit-description-${eventid}`)
     .value.trim();
