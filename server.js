@@ -22,7 +22,7 @@ app.engine('hbs', handlebars({
 }));
 
 const sess = {
-  secret: 'Super secret secret',
+  secret: process.env.SECRET,
   cookie: {},
   resave: false,
   saveUninitialized: false,
