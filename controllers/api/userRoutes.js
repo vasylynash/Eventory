@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const authConfig = require('../../src/auth/authConfig');
-const { User } = require('../../models');
+const { User, Participants } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 router.post(
   '/login',
@@ -12,12 +13,11 @@ router.post('/logout', function (req, res) {
   res.redirect('/');
 });
 
-router.post(
-  '/',
-  authConfig.authenticate('local-signup', {
+router.post('/', authConfig.authenticate('local-signup', {
     successRedirect: '/',
-    failureRedirect: '/login',
   })
 );
+
+
 
 module.exports = router;
