@@ -2,9 +2,7 @@ const allEditBtns = document.querySelectorAll('.edit-post-btn');
 
 const editEvent = async (event) => {
   event.preventDefault();
-
   const eventid = event.target.getAttribute('data-value');
-  console.log(eventid)
   const eventDateTime =
     document.querySelector(`#edit-date-${eventid}`).value.trim() +
     ' ' +
@@ -15,9 +13,9 @@ const editEvent = async (event) => {
   const eventAddress = document
     .querySelector(`#edit-title-${eventid}`)
     .value.trim();
-  const eventCategory = document
-    .querySelector(`#edit-category-${eventid}`)
-    .value.trim();
+  const eventCategory = document.querySelector('#edit-dropdown-input').value;
+
+  console.log(eventCategory)
   const eventDescription = document
     .querySelector(`#edit-description-${eventid}`)
     .value.trim();
@@ -41,7 +39,7 @@ const editEvent = async (event) => {
     });
 
     if (response.ok) {
-     document.location.replace('/dashboard');
+   //  document.location.replace('/dashboard');
     } else {
       alert('Failed to edit event');
     }
