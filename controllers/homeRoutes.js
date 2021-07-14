@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Event, User, Participants } = require('../models');
+const { Event, User, Participants, Category } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async function (req, res) {
@@ -38,6 +38,10 @@ router.get('/dashboard', withAuth, async function (req, res) {
       {
         model: User,
         attributes: ['username']
+      },
+      {
+        model: Category,
+        attributes: ['title']
       }
     ]
   });
