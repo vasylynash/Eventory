@@ -13,11 +13,8 @@ router.post('/logout', function (req, res) {
   res.redirect('/');
 });
 
-router.post(
-  '/',
-  authConfig.authenticate('local-signup', {
+router.post('/', authConfig.authenticate('local-signup', {
     successRedirect: '/',
-    failureRedirect: '/login',
   })
 );
 

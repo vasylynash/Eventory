@@ -4,10 +4,7 @@ const signupForm = async (event) => {
   const username = document.querySelector('#regUsername').value.trim();
   const password = document.querySelector('#registerPassword').value;
   const confirmPassword = document.querySelector('#confirmPassword').value;
-  const validEmail =
-    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
-      email
-    );
+
   if (email && password && username) {
     if (password === confirmPassword) {
       if (password.length >= 8) {
