@@ -59,7 +59,10 @@
       {{!-- if logged in display logout button --}}
       <ul class="nav navbar-nav navbar-right">
         {{#if currentUser}}
-        <li><a href="#" class="login-register" id="logout">Logout</a></li>
+        <li class="logout-usr">
+          <h4 class="nav-username"><span class="welcome">Welcome,</span> {{currentUser.username}}!</h4>                    
+          <a href="#" class="login-register" id="logout">Logout</a>
+        </li>
         {{else}}
         <li><a href="#" class="login-register" data-bs-toggle="modal" data-bs-target="#register-Modal">Sign Up</a></li>
         <li><a href="#" class="login-register" data-bs-toggle="modal" data-bs-target="#Modal">Login</a></li>
@@ -198,7 +201,7 @@
             <div class="form-outline mb-4">
               <label class="form-label create-label" for="event-title">Event Category</label>
               <select name="event-category" class="form-control long-input" id="dropdown-input-create">
-                <option value="0" selected hidden>Choose event Categorty</option>
+                <option value="0" selected hidden>Choose event category</option>
                 <option value="1">Hiking</option>
                 <option value="2">Camping</option>
                 <option value="3">Fishing</option>
