@@ -10,9 +10,7 @@ const editEvent = async (event) => {
   const eventTitle = document.querySelector(`#edit-title-${eventid}`).value.trim();
   const eventAddress = document.querySelector(`#edit-title-${eventid}`).value.trim();
   const eventDescription = document.querySelector(`#edit-description-${eventid}`).value.trim();
-
   const eventCategory = document.querySelector(`#dropdown${eventid}`).value;
-
   
   if (
     eventDateTime &&
